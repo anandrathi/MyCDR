@@ -1,0 +1,7 @@
+(5996) calling ACE_Singleton<TYPE, ACE_LOCK>::instance in file `e:\ani\ace_wrappers\ace\singleton.cpp' on line 55
+(5996) leaving ACE_Singleton<TYPE, ACE_LOCK>::instance
+(5996) calling Config::GetLogLevel in file `e:\ani\mycdr\mycdr\config.cpp' on line 69
+(5996)  Config::GetLogLevel return null 
+(5996) leaving Config::GetLogLevel
+(5996)  Config::GetSettings return null 
+(5996)  Config::GetSettings return null 

@@ -1,0 +1,71 @@
+// An example configuration file that stores information about a network elements.
+//E:\ani\MyCDR\IN\CDR_IN_FORMAT.CNF
+
+
+PRERATETABLE = (
+{ NAME= "CALLER_NUMBER" ;  POS=1; LEN=20;}
+);
+
+
+test1="test";
+
+
+
+LOOKUP_SCRIPT = "lookup.tcl"
+STOREDEF_SCRIPT = "storedef.tcl"
+
+COMMONFIELDS	= (
+	{ NAME= "CALLER_NUMBER" ; TYPE="TEXT"	LEN=20;} , 
+	{ NAME= "CALLED_NUMBER" ; TYPE="TEXT"	LEN=20;} , 
+	{ NAME= "TIME" ;  		  TYPE="TEXT"	LEN=20;} , 
+	{ NAME= "DURATION" ;  	  TYPE="TEXT"	LEN=20;} , 
+	{ NAME= "CALLER_IMEI" ;   TYPE="TEXT"	LEN=20;} , 
+	{ NAME= "CALLED_IMEI" ;   TYPE="TEXT"	LEN=20;} , 
+	{ NAME= "CALLER_MSC" ;    TYPE="TEXT"	LEN=20;} , 
+	{ NAME= "CALLED_msc" ;    TYPE="TEXT"	LEN=20;}  
+);
+
+INELEMENT = (	
+	{	PATH="A";
+			FILE_EXP="NOR*";
+			ELEMENT_NAME = "NORTEL1";
+			TYPE = "CSV";
+			FILE_TYPE	= {  
+							FIELDSEPERATOR = 9 ;
+							LINE_SEPERATOR = 10; 
+							NUMBER_OF_FIELDS = 8; 
+							MAX_FIELD_LEN = 60;
+						  }; 
+			FIELDS	= (
+							{ NAME= "CALLER_NUMBER" ;  	POS=1; LEN=20; MAP  = "CALLER_NUMBER" ;	} , 
+							{ NAME= "CALLED_NUMBER" ;  	POS=2; LEN=20; MAP 	= "CALLED_NUMBER";	} , 
+							{ NAME= "TIME" ;  			POS=3; LEN=20; MAP 	= "TIME" ;			} , 
+							{ NAME= "DURATION" ;  		POS=4; LEN=20; MAP 	= "DURATION" ;		} , 
+							{ NAME= "CALLER_IMEI" ;  	POS=5; LEN=20; MAP 	= "CALLER_IMEI" ; 	} , 
+							{ NAME= "CALLED_IMEI" ;  	POS=6; LEN=20; MAP 	= "CALLED_IMEI" ;	} , 
+							{ NAME= "CALLER_MSC" ;  	POS=7; LEN=20; MAP 	= "CALLER_MSC" ;	} , 
+							{ NAME= "CALLED_msc" ;  	POS=8; LEN=20; MAP 	= "CALLED_msc" ;	}  
+					);
+	},
+	{	
+			PATH="B";
+			FILE_EXP="NOR*";
+			ELEMENT_NAME = "SEIMENS1";
+			TYPE = "FIXED";
+			FILE_TYPE	= {  
+							LINE_SEPERATOR = 10; 
+							NUMBER_OF_FIELDS = 8; 
+						  }; 
+			FIELDS		= (
+							{ NAME= "CALLER_NUMBER" ;  	START=1; END=10; MAP ="CALLER_NUMBER"} , 
+							{ NAME= "CALLED_NUMBER" ;  	START=11; END=20;MAP}= , 
+							{ NAME= "TIME" ;  			START=21; END=30;MAP}= , 
+							{ NAME= "DURATION" ;  		START=31; END=40;MAP}= , 
+							{ NAME= "CALLER_IMEI" ;  	START=41; END=50;MAP}= , 
+							{ NAME= "CALLED_IMEI" ;  	START=51; END=60;MAP}= , 
+							{ NAME= "CALLER_MSC" ;  	START=61; END=70;MAP}= , 
+							{ NAME= "CALLED_msc" ;  	START=71; END=80;MAP}=  
+						  );                                                 
+	}                                                                        
+);                                                                           
+                                                                             

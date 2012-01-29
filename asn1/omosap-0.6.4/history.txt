@@ -1,0 +1,16 @@
+
+2008-11-18 Project re-started with new name "OMOSAP".
+2008-11-23 Added Doxyfile.
+2008-12-15 Two different Makefiles: linux, MAC_OSX
+2008-12-15 "vdchunk_asn1.*" renamed in "vdchunk-asn1.*"
+2009-04-19 Slightly updated "readme.txt"; definiton of further actions
+2009-04-24 Bugfix in "Makefile_openpgpkey"
+2009-04-25 New directory structure: "./src", "./examples"
+2009-04-30 "openpgpkey" can read raw keys now
+2010-08-01 v0.4.0
+2009-09-25 Important change in makefile to use valgrind: "-static" removed
+2010-09-01 Complete renewal of ASN1 parsing procedures (omosap_light2)
+2010-09-27 v0.6.1 - Tags with indefinite length
+2011-01-16 v0.6.3 - Now uses file "dumpasn1.cfg" for OID names
+2011-12-04 v0.6.4 - Small bugfixes and cleaning up.....
+

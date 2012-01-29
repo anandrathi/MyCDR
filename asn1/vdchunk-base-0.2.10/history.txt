@@ -1,0 +1,16 @@
+
+2008-09-30 Bug fix: "#include grypt.h" removed
+2008-11-08 Copied bug-fixed version from "vdchunk-cryptopp"
+2008-11-08 Added Doxyfile
+2008-11-17 Copied bug-fixed version from "vdchunk-cryptopp"
+2009-06-11 Copied new version from "vdchunk-cryptopp" (0.2.15)
+2009-06-11 Distribution: 0.2.1
+2009-11-18 Bug fix: "delete [] BLK"
+2010-04-11 Copied new version from "vdchunk-cryptopp" (0.2.19)
+2010-09-19 Copied new version from "vdchunk-nolib"
+           Distribution: 0.2.5
+2010-10-08 "read_hex_file"
+           Distribution: 0.2.6
+2010-10-15 Changes in lhexlib; lhexlib.h now a distributed header
+           file; crc-16
+2011-12-13 v0.2.10 - Some changes in README and docu.cpp

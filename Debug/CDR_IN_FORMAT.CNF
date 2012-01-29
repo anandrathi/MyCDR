@@ -1,0 +1,47 @@
+// An example configuration file that stores information about a network elements.
+
+IN_ELEMENT =
+{
+	(		{	PATH="A";
+				FILE_EXP="NOR*";
+				ELEMENT_NAME = "NORTEL1";
+				TYPE = "CSV";
+				FILE_TYPE	= {  
+								FIELDSEPERATOR = "\t" ;
+								LINE_SEPERATOR = "\n"; 
+								NUMBER_OF_FIELDS=8; 
+								MAX_FIELD_LEN=60;
+							  }; 
+				FIELDS	= (		{ NAME= "CALLER_NUMBER" ;  POS=1; LEN=20;} , 
+								{ NAME= "CALLED_NUMBER" ;  POS=2; LEN=20;} , 
+								{ NAME= "TIME" ;  POS=3; LEN=20;} , 
+								{ NAME= "DURATION" ;  POS=4; LEN=20;} , 
+								{ NAME= "CALLER_IMEI" ;  POS=5; LEN=20;} , 
+								{ NAME= "CALLED_IMEI" ;  POS=6; LEN=20;} , 
+								{ NAME= "CALLER_MSC" ;  POS=7; LEN=20;} , 
+								{ NAME= "CALLED_msc" ;  POS=8; LEN=20;}  
+						)
+			};
+	) ,
+	(		{	
+				PATH="B";
+				FILE_EXP="NOR*";
+				ELEMENT_NAME = "SEIMENS1";
+				TYPE = "FIXED";
+				FILE_TYPE	= {  
+								LINE_SEPERATOR = "\n"; 
+								NUMBER_OF_FIELDS=8; 
+							  }; 
+				FIELDS		= (
+								{ NAME= "CALLER_NUMBER" ;  	START=1; END=10;} , 
+								{ NAME= "CALLED_NUMBER" ;  	START=11; END=20;} , 
+								{ NAME= "TIME" ;  			START=21; END=30;} , 
+								{ NAME= "DURATION" ;  		START=31; END=40;} , 
+								{ NAME= "CALLER_IMEI" ;  	START=41; END=50;} , 
+								{ NAME= "CALLED_IMEI" ;  	START=51; END=60;} , 
+								{ NAME= "CALLER_MSC" ;  	START=61; END=70;} , 
+								{ NAME= "CALLED_msc" ;  	START=71; END=80;}  
+							  )
+			};
+	)
+}

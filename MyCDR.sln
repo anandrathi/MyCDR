@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyCDR", "MyCDR\MyCDR.vcxproj", "{FCC73A4E-D52E-43DD-867F-C27928830B0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCC73A4E-D52E-43DD-867F-C27928830B0D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FCC73A4E-D52E-43DD-867F-C27928830B0D}.Debug|Win32.Build.0 = Debug|Win32
+		{FCC73A4E-D52E-43DD-867F-C27928830B0D}.Release|Win32.ActiveCfg = Release|Win32
+		{FCC73A4E-D52E-43DD-867F-C27928830B0D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

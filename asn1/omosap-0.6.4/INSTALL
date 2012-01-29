@@ -1,0 +1,20 @@
+
+OMOSAP
+One More Open-Source ASN1 Parser
+
+(C) 2007-2009 Ingo Naumann
+
+Installation:
+
+a) That's how it is supposed to be:
+
+- Install the package "vdchunk-base", see http://research.naumachiarius.com/software/vdchunk.html, at least version 0.2.2
+- Unpack the contents of this package, go to the directory
+- type "make"
+- The executable is the file "omosap", type "./omosap filename" to start parser
+
+b) Simple Work-Arounds:
+
+- For installation on Apple MAC OSX, remove the word "-static" of the second line of "Makefile".
+- If you have the package "vdchunk-cryptopp" installed on your computer (instead of "vdchunk-base"), you have to change the package name in the first line of "Makefile"
+
