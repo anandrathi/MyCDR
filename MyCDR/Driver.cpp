@@ -42,6 +42,7 @@ int Driver::Run()
 		te->path = itor->first;
 		PathRecordPair &t = itor->second;
 		te->_RecContMap = t._RecContMap;
+		te->InitScript();
 		te->open();
 		itor->second._TaskExecutor = te;
 	}

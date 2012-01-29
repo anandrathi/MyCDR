@@ -1,0 +1,209 @@
+(4260) TaskExecutor::svc sleep for 8 seconds 
+(4260) DirMoniter::Collect current path E:\ani\MyCDR\MyCDR 
+(4260) DirMoniter::Collect path CSV is a directory containing: 
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\1.txt is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\2.txt is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\3.txt is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\DISC is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\DONE is a file  
+(4260) DirMoniter::Collect		CSV\1.txt
+(4260) DirMoniter::Collect		CSV\2.txt
+(4260) DirMoniter::Collect		CSV\3.txt
+(4260) TaskExecutor::svc srtPath=CSV\1.txt srtPathDisc=CSV/DISC/1.txt.disc srtPathDone=CSV/DONE/1.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\1.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 19595264l path =CSV\1.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\2.txt srtPathDisc=CSV/DISC/2.txt.disc srtPathDone=CSV/DONE/2.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\2.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 19595264l path =CSV\2.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\3.txt srtPathDisc=CSV/DISC/3.txt.disc srtPathDone=CSV/DONE/3.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\3.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =CSV\3.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc sleep for 8 seconds 
+(4260) DirMoniter::Collect current path E:\ani\MyCDR\MyCDR 
+(4260) DirMoniter::Collect path CSV is a directory containing: 
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\1.txt is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\2.txt is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\3.txt is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\DISC is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\DONE is a file  
+(4260) DirMoniter::Collect		CSV\1.txt
+(4260) DirMoniter::Collect		CSV\2.txt
+(4260) DirMoniter::Collect		CSV\3.txt
+(4260) DirMoniter::Collect		CSV\1.txt
+(4260) DirMoniter::Collect		CSV\2.txt
+(4260) DirMoniter::Collect		CSV\3.txt
+(4260) TaskExecutor::svc srtPath=CSV\1.txt srtPathDisc=CSV/DISC/1.txt.disc srtPathDone=CSV/DONE/1.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\1.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\1.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\2.txt srtPathDisc=CSV/DISC/2.txt.disc srtPathDone=CSV/DONE/2.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\2.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\2.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\3.txt srtPathDisc=CSV/DISC/3.txt.disc srtPathDone=CSV/DONE/3.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\3.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\3.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\1.txt srtPathDisc=CSV/DISC/1.txt.disc srtPathDone=CSV/DONE/1.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\1.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =CSV\1.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\2.txt srtPathDisc=CSV/DISC/2.txt.disc srtPathDone=CSV/DONE/2.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\2.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =CSV\2.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\3.txt srtPathDisc=CSV/DISC/3.txt.disc srtPathDone=CSV/DONE/3.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\3.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =CSV\3.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc sleep for 8 seconds 
+(4260) DirMoniter::Collect current path E:\ani\MyCDR\MyCDR 
+(4260) DirMoniter::Collect path CSV is a directory containing: 
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\1.txt is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\2.txt is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\3.txt is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\DISC is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\DONE is a file  
+(4260) DirMoniter::Collect		CSV\1.txt
+(4260) DirMoniter::Collect		CSV\2.txt
+(4260) DirMoniter::Collect		CSV\3.txt
+(4260) DirMoniter::Collect		CSV\1.txt
+(4260) DirMoniter::Collect		CSV\2.txt
+(4260) DirMoniter::Collect		CSV\3.txt
+(4260) DirMoniter::Collect		CSV\1.txt
+(4260) DirMoniter::Collect		CSV\2.txt
+(4260) DirMoniter::Collect		CSV\3.txt
+(4260) TaskExecutor::svc srtPath=CSV\1.txt srtPathDisc=CSV/DISC/1.txt.disc srtPathDone=CSV/DONE/1.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\1.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =CSV\1.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\2.txt srtPathDisc=CSV/DISC/2.txt.disc srtPathDone=CSV/DONE/2.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\2.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =CSV\2.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\3.txt srtPathDisc=CSV/DISC/3.txt.disc srtPathDone=CSV/DONE/3.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\3.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =CSV\3.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\1.txt srtPathDisc=CSV/DISC/1.txt.disc srtPathDone=CSV/DONE/1.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\1.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =CSV\1.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\2.txt srtPathDisc=CSV/DISC/2.txt.disc srtPathDone=CSV/DONE/2.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\2.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =CSV\2.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\3.txt srtPathDisc=CSV/DISC/3.txt.disc srtPathDone=CSV/DONE/3.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\3.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =CSV\3.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\1.txt srtPathDisc=CSV/DISC/1.txt.disc srtPathDone=CSV/DONE/1.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\1.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\1.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\2.txt srtPathDisc=CSV/DISC/2.txt.disc srtPathDone=CSV/DONE/2.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\2.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\2.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\3.txt srtPathDisc=CSV/DISC/3.txt.disc srtPathDone=CSV/DONE/3.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\3.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\3.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc sleep for 8 seconds 
+(4260) DirMoniter::Collect current path E:\ani\MyCDR\MyCDR 
+(4260) DirMoniter::Collect path CSV is a directory containing: 
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\1.txt is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\2.txt is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\3.txt is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\DISC is a file  
+(4260) back_insert_iterator_ignoredir::Collect operator= CSV\DONE is a file  
+(4260) DirMoniter::Collect		CSV\1.txt
+(4260) DirMoniter::Collect		CSV\2.txt
+(4260) DirMoniter::Collect		CSV\3.txt
+(4260) DirMoniter::Collect		CSV\1.txt
+(4260) DirMoniter::Collect		CSV\2.txt
+(4260) DirMoniter::Collect		CSV\3.txt
+(4260) DirMoniter::Collect		CSV\1.txt
+(4260) DirMoniter::Collect		CSV\2.txt
+(4260) DirMoniter::Collect		CSV\3.txt
+(4260) DirMoniter::Collect		CSV\1.txt
+(4260) DirMoniter::Collect		CSV\2.txt
+(4260) DirMoniter::Collect		CSV\3.txt
+(4260) TaskExecutor::svc srtPath=CSV\1.txt srtPathDisc=CSV/DISC/1.txt.disc srtPathDone=CSV/DONE/1.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\1.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\1.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\2.txt srtPathDisc=CSV/DISC/2.txt.disc srtPathDone=CSV/DONE/2.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\2.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =CSV\2.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\3.txt srtPathDisc=CSV/DISC/3.txt.disc srtPathDone=CSV/DONE/3.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\3.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\3.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\1.txt srtPathDisc=CSV/DISC/1.txt.disc srtPathDone=CSV/DONE/1.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\1.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\1.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\2.txt srtPathDisc=CSV/DISC/2.txt.disc srtPathDone=CSV/DONE/2.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\2.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\2.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\3.txt srtPathDisc=CSV/DISC/3.txt.disc srtPathDone=CSV/DONE/3.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\3.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\3.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\1.txt srtPathDisc=CSV/DISC/1.txt.disc srtPathDone=CSV/DONE/1.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\1.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\1.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\2.txt srtPathDisc=CSV/DISC/2.txt.disc srtPathDone=CSV/DONE/2.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\2.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\2.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\3.txt srtPathDisc=CSV/DISC/3.txt.disc srtPathDone=CSV/DONE/3.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\3.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =CSV\3.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\1.txt srtPathDisc=CSV/DISC/1.txt.disc srtPathDone=CSV/DONE/1.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\1.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\1.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\2.txt srtPathDisc=CSV/DISC/2.txt.disc srtPathDone=CSV/DONE/2.txt.done
+(4260) MMapFileReader::ReadFile ret==0 0 , CSV\2.txt 
+(4260) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =CSV\2.txt 
+(4260) ret(0) = RecordContainer::Populate(p) 
+(4260) filesize(15) 
+(4260) TaskExecutor::svc srtPath=CSV\3.txt srtPathDisc=CSV/DISC/3.txt.disc srtPathDone=CSV/DONE/3.txt.done
+(4260) MMapFileReader::ReadFile

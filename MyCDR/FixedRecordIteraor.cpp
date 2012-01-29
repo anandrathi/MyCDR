@@ -41,7 +41,7 @@ void FixedRecordIteraor::begin(void)
 
 AR_INT64 FixedRecordIteraor::Next(void)
 {
-	ACE_TRACE("CharRecordIteraor::Next");
+	ACE_TRACE("FixedRecordIteraor::Next");
 	PARSESTATE s;
 	char * ps=_currentRowData;
 	char * psCol=_currentRowData;
@@ -153,16 +153,16 @@ void FixedRecordIteraor::setSTRVar(std::map<std::string, std::string> &s)
 void FixedRecordIteraor::InitScriptVar(void *p, void * s)
 {
 	ACE_TRACE("FixedRecordIteraor::InitScriptVar");
-	Record::RECORDDATANAME::iterator it = _FixedLocationRecord->_recordDataName.begin();
-	for(;it!=_FixedLocationRecord->_recordDataName.end();it++)
-	{
-		unsigned long  i=0;
-		SQChar *varName = (SQChar *)it->field.c_str();
-		SQChar *addr = const_cast<SQChar*>( "" ); 
-		Sqrat::Table* pRecordTable = reinterpret_cast<Sqrat::Table *>(p);
-		pRecordTable->SetValue( varName, addr ); 
-	}
-	Sqrat::Script* pScript = reinterpret_cast<Sqrat::Script *>(s);
+	//Record::RECORDDATANAME::iterator it = _FixedLocationRecord->_recordDataName.begin();
+	//for(;it!=_FixedLocationRecord->_recordDataName.end();it++)
+	//{
+	//	unsigned long  i=0;
+	//	SQChar *varName = (SQChar *)it->field.c_str();
+	//	SQChar *addr = const_cast<SQChar*>( "" ); 
+	//	Sqrat::Table* pRecordTable = reinterpret_cast<Sqrat::Table *>(p);
+	//	pRecordTable->SetValue( varName, addr ); 
+	//}
+	//Sqrat::Script* pScript = reinterpret_cast<Sqrat::Script *>(s);
 //	pScript->Compile
 
 }

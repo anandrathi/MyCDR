@@ -1,0 +1,68 @@
+(2164) TaskExecutor::svc sleep for 8 seconds 
+(2164) DirMoniter::Collect current path E:\ani\MyCDR\MyCDR 
+(2164) DirMoniter::Collect path FIX is a directory containing: 
+(2164) back_insert_iterator_ignoredir::Collect operator= FIX\1.txt is a file  
+(2164) back_insert_iterator_ignoredir::Collect operator= FIX\2.txt is a file  
+(2164) back_insert_iterator_ignoredir::Collect operator= FIX\3.txt is a file  
+(2164) back_insert_iterator_ignoredir::Collect operator= FIX\DISC is a file  
+(2164) back_insert_iterator_ignoredir::Collect operator= FIX\DONE is a file  
+(2164) DirMoniter::Collect		FIX\1.txt
+(2164) DirMoniter::Collect		FIX\2.txt
+(2164) DirMoniter::Collect		FIX\3.txt
+(2164) TaskExecutor::svc srtPath=FIX\1.txt srtPathDisc=FIX/DISC/1.txt.disc srtPathDone=FIX/DONE/1.txt.done
+(2164) MMapFileReader::ReadFile ret==0 0 , FIX\1.txt 
+(2164) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =FIX\1.txt 
+(2164) ret(0) = RecordContainer::Populate(p) 
+(2164) filesize(81) 
+(2164) TaskExecutor::svc srtPath=FIX\2.txt srtPathDisc=FIX/DISC/2.txt.disc srtPathDone=FIX/DONE/2.txt.done
+(2164) MMapFileReader::ReadFile ret==0 0 , FIX\2.txt 
+(2164) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =FIX\2.txt 
+(2164) ret(0) = RecordContainer::Populate(p) 
+(2164) filesize(81) 
+(2164) TaskExecutor::svc srtPath=FIX\3.txt srtPathDisc=FIX/DISC/3.txt.disc srtPathDone=FIX/DONE/3.txt.done
+(2164) MMapFileReader::ReadFile ret==0 0 , FIX\3.txt 
+(2164) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =FIX\3.txt 
+(2164) ret(0) = RecordContainer::Populate(p) 
+(2164) filesize(81) 
+(2164) TaskExecutor::svc sleep for 8 seconds 
+(2164) DirMoniter::Collect current path E:\ani\MyCDR\MyCDR 
+(2164) DirMoniter::Collect path FIX is a directory containing: 
+(2164) back_insert_iterator_ignoredir::Collect operator= FIX\1.txt is a file  
+(2164) back_insert_iterator_ignoredir::Collect operator= FIX\2.txt is a file  
+(2164) back_insert_iterator_ignoredir::Collect operator= FIX\3.txt is a file  
+(2164) back_insert_iterator_ignoredir::Collect operator= FIX\DISC is a file  
+(2164) back_insert_iterator_ignoredir::Collect operator= FIX\DONE is a file  
+(2164) DirMoniter::Collect		FIX\1.txt
+(2164) DirMoniter::Collect		FIX\2.txt
+(2164) DirMoniter::Collect		FIX\3.txt
+(2164) DirMoniter::Collect		FIX\1.txt
+(2164) DirMoniter::Collect		FIX\2.txt
+(2164) DirMoniter::Collect		FIX\3.txt
+(2164) TaskExecutor::svc srtPath=FIX\1.txt srtPathDisc=FIX/DISC/1.txt.disc srtPathDone=FIX/DONE/1.txt.done
+(2164) MMapFileReader::ReadFile ret==0 0 , FIX\1.txt 
+(2164) MMapFileReader::ReadFile ret==0 , ptr = 20709376l path =FIX\1.txt 
+(2164) ret(0) = RecordContainer::Populate(p) 
+(2164) filesize(81) 
+(2164) TaskExecutor::svc srtPath=FIX\2.txt srtPathDisc=FIX/DISC/2.txt.disc srtPathDone=FIX/DONE/2.txt.done
+(2164) MMapFileReader::ReadFile ret==0 0 , FIX\2.txt 
+(2164) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =FIX\2.txt 
+(2164) ret(0) = RecordContainer::Populate(p) 
+(2164) filesize(81) 
+(2164) TaskExecutor::svc srtPath=FIX\3.txt srtPathDisc=FIX/DISC/3.txt.disc srtPathDone=FIX/DONE/3.txt.done
+(2164) MMapFileReader::ReadFile ret==0 0 , FIX\3.txt 
+(2164) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =FIX\3.txt 
+(2164) ret(0) = RecordContainer::Populate(p) 
+(2164) filesize(81) 
+(2164) TaskExecutor::svc srtPath=FIX\1.txt srtPathDisc=FIX/DISC/1.txt.disc srtPathDone=FIX/DONE/1.txt.done
+(2164) MMapFileReader::ReadFile ret==0 0 , FIX\1.txt 
+(2164) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =FIX\1.txt 
+(2164) ret(0) = RecordContainer::Populate(p) 
+(2164) filesize(81) 
+(2164) TaskExecutor::svc srtPath=FIX\2.txt srtPathDisc=FIX/DISC/2.txt.disc srtPathDone=FIX/DONE/2.txt.done
+(2164) MMapFileReader::ReadFile ret==0 0 , FIX\2.txt 
+(2164) MMapFileReader::ReadFile ret==0 , ptr = 20643840l path =FIX\2.txt 
+(2164) ret(0) = RecordContainer::Populate(p) 
+(2164) filesize(81) 
+(2164) TaskExecutor::svc srtPath=FIX\3.txt srtPathDisc=FIX/DISC/3.txt.disc srtPathDone=FIX/DONE/3.txt.done
+(2164) MMapFileReader::ReadFile ret==0 0 , FIX\3.txt 
+(2164) MMapFileReader::ReadFile ret==0 , ptr = 2064

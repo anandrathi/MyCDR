@@ -183,7 +183,7 @@ while(1)
 		
 			//if(pRecorditerator->Next()!=Recorditerator::END)
 				pRecorditerator->begin();
-				pRecorditerator->InitScriptVar( pRecordTable , pScript );
+				//pRecorditerator->InitScriptVar( pRecordTable , pScript );
 				bool markBadFile=false;
 				while(1) 
 				{
@@ -193,7 +193,7 @@ while(1)
 					{
 						break;
 					}
-					if(pRecorditerator->getState()!=Recorditerator::RECORDPOSITION_OK)
+					if(pRecorditerator->getState()!=Recorditerator::RECORDERROR_GOOD ) //Recorditerator::RECORDPOSITION_OK
 					{
 						markBadFile=true;
 						break;
@@ -203,6 +203,7 @@ while(1)
 					//this->setTCLVar(this->tcli.get());
 					this->setScriptVar();
 					pRecorditerator->setScriptVar( pRecordTable );
+					pScript->Run();
 					if(_RecordStatus==2)
 					{
 						//Discard the record.
@@ -214,7 +215,7 @@ while(1)
 					}
 				}//while
 				_RecContMap._RecordContainer->close();
-				DirMoniter::rename( srtPath, srtPathDone );
+				//DirMoniter::rename( srtPath, srtPathDone );
 			}//try
 			catch(std::exception & e)
 			{
@@ -271,6 +272,16 @@ void TaskExecutor::InitScript()
   pRootTable->Bind(_SC("Record"), *pRecordTable);
   pScript = new Sqrat::Script(_vm);
   this->_script_path = _RecContMap._RecordContainer->getScriptPath();
+  
+	Record::RECORDDATANAME::iterator it = _RecContMap._Record->_recordDataName.begin();
+	for(;it!=_RecContMap._Record->_recordDataName.end();it++)
+	{
+		unsigned long  i=0;
+		SQChar *varName = (SQChar *)it->field.c_str();
+		SQChar *addr = const_cast<SQChar*>( "" ); 
+		pRecordTable->SetValue( varName, addr ); 
+	}
+
   pScript->CompileFile( this->_script_path);
 }
 

@@ -1,0 +1,20 @@
+(5668) calling ACE_Singleton<TYPE, ACE_LOCK>::instance in file `e:\ani\ace_wrappers\ace\singleton.cpp' on line 55
+(5668) leaving ACE_Singleton<TYPE, ACE_LOCK>::instance
+(5668) calling Config::GetLogLevel in file `e:\ani\mycdr\mycdr\config.cpp' on line 69
+(5668) leaving Config::GetLogLevel
+(5668) test folders FIX 
+ FIX/DISC
+ FIX/DONE 
+ (5668) DirMoniter::testPath path FIX found
+(5668) DirMoniter::testPath path FIX/DISC found
+(5668) DirMoniter::testPath path FIX/DONE found
+(5668) _recLen= 10 
+(5668) _recLen= 20 
+(5668) _recLen= 30 
+(5668) _recLen= 40 
+(5668) _recLen= 50 
+(5668) _recLen= 60 
+(5668) _recLen= 70 
+(5668) _recLen= 80 
+(5668) CharRecordContainer record len=0 
+(5668) RecordFactory  sqlstr =  CREATE TABLE RATED ( CALLED_IMEI, CALLED_NUMBER, CALLED_msc, CALLER_IMEI, CALLER_MSC, CALLER_NUMBER, DURATION, TIME );  
