@@ -130,6 +130,12 @@
     <ClInclude Include="DBConfigSQLLITE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DBConfigMySQL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBConfigODBC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -217,6 +223,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\sqlite-amalgamation-3071000\sqlite3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="temp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBConfigMySQL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBConfigODBC.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

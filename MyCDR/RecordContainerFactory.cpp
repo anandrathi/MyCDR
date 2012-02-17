@@ -7,6 +7,9 @@
 
 RecordContainerFactory::RecordContainerFactory(void)
 {
+	_CharRecordContainer = 0; 
+	_FixedRecordContainer = 0;
+
 }
 
 
@@ -15,20 +18,25 @@ RecordContainerFactory::~RecordContainerFactory(void)
 }
 
 
-RecordContainer * RecordContainerFactory::GetRecordContainer(const char* RecordType)
+RecordContainer * RecordContainerFactory::GetRecordContainer(const char* RecordType, RecordDetails * pRecordDetails)
 {
 	ACE_TRACE("RecordContainerFactory::GetRecordContainer");
-	static CharRecordContainer _CharRecordContainer; 
-	static FixedRecordContainer _FixedRecordContainer;
 
-	if(strcmp(RecordType,"CSV")==0)
+	if(strcmp(RecordType,"C")==0)
 	{	
-		return &_CharRecordContainer;
+		if(_CharRecordContainer==0 )
+		{
+			_CharRecordContainer = new CharRecordContainer(pRecordDetails); 
+		}
+		return _CharRecordContainer;
 		
-	} else if(strcmp(RecordType,"FIXED")==0)
+	} else if(strcmp(RecordType,"F")==0)
 	{
-		return &_FixedRecordContainer;
-		
+		if(_FixedRecordContainer==0)
+		{
+			_FixedRecordContainer = new FixedRecordContainer(pRecordDetails);
+		}
+		return _FixedRecordContainer;
 	}
 	return 0;
 }

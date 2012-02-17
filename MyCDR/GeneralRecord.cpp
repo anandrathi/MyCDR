@@ -15,6 +15,20 @@ GeneralRecord::~GeneralRecord(void)
 {
 }
 
+void GeneralRecord::push_back(const std::string&  key, std::string&  type, int len)
+{
+	GENREC_INFO gi;
+	if( type == "T" || type == "t" )
+		gi.type=GENREC_INFO::RECTYPE::TEXT;
+	else if( type == "N" || type == "n" )
+		gi.type=GENREC_INFO::RECTYPE::NUMBER;
+	else if( type == "D"|| type == "d" )
+		gi.type=GENREC_INFO::RECTYPE::DATE;
+
+	gi.len = len;
+	_value[key]=gi;
+}
+
 
 const char * GeneralRecord::GetValue(const std::string&  k)
 {

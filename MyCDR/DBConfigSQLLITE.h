@@ -1,12 +1,18 @@
+
+#ifndef DBCONFIGSQLLITE_H
+#define DBCONFIGSQLLITE_H
+
 #include "DBConfig.h"
-#include "soci-sqlite3.h"
 
 class DBConfigSQLLITE : public DBConfig
 {
+	friend class DBConfig;
 public:
 
 protected:
-	DBConfigSQLLITE(std::string connectString):DBConfig(connectString) {}
+	DBConfigSQLLITE(const std::string & connectString):DBConfig(connectString) {}
 	virtual bool Init();
 	~DBConfigSQLLITE();
 };
+
+#endif

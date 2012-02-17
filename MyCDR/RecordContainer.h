@@ -1,4 +1,3 @@
-#pragma once
 
 #ifndef _AR_RECORDCONTAINER_H
 #define _AR_RECORDCONTAINER_H
@@ -10,29 +9,30 @@ class FileReader;
 #include <string> 
 #include <vector> 
 
+#include "Record.h"
 
 class RecordContainer : public MyCDRBASE
 {
 protected:
-	
+	RecordDetails * _RecordDetails;
 	Recorditerator * _Recorditerator;
 	std::string _path;
 	std::string _filename;
-	std::string _script_path;
-	std::string _script;
+	//std::string _script_path;
+	//std::string _script;
 
-	int _bufferSize;
+	//int _bufferSize;
 public:
 	FileReader* _FileReader;
 	void close(void);
-	RecordContainer(void);
+	RecordContainer(RecordDetails * pRecordDetails );
 	~RecordContainer(void);
-	void setScriptPath(std::string& scriptPath) {_script_path = scriptPath; }
-	const std::string& getScriptPath(void) {return _script_path ; }
-	void setBufferSize(unsigned long bufferSize) {_bufferSize = bufferSize; }
-	int getBufferSize(void) {return _bufferSize ; }
+//	void setScriptPath(std::string& scriptPath) {_script_path = scriptPath; }
+	//void setBufferSize(unsigned long bufferSize) {_bufferSize = bufferSize; }
+	//int getBufferSize(void) {return _bufferSize ; }
 	virtual int Populate(const std::string& ) ;
-	void setPath(std::string path){_path= path;}
+	//const std::string& getScriptPath(void) {return _script_path ; }
+	//void setPath(std::string path){_path= path;}
 	Recorditerator * GetRecordIterator() {return _Recorditerator;}
 	void dump(void);
 };

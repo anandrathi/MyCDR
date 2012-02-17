@@ -65,7 +65,7 @@ int main(int argc, _TCHAR* argv[])
 	p->setLevelProcess(level);
 
 	RECORDFACTORY::instance()->Init();
-	RECORDFACTORY::instance()->InitGeneral();
+	//RECORDFACTORY::instance()->InitGeneral();
 
 	//RunTest();
 	//return 0;

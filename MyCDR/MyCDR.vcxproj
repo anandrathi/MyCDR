@@ -50,7 +50,7 @@
       <WarningLevel>Level1</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;SQLITE_TCL;ACE_NTRACE=0</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>E:\ani\sqlite-amalgamation-3071000;E:\ani\libconfig-1.4.6\lib;E:\ani\ACE_wrappers\;E:\ani\boost_1_46_1\;cpptcl-1.1.3;F:\Tcl\include;E:\ani\MyCDR\MyCDR\sqrat;E:\ani\squirrel_3_0_2_stable\SQUIRREL3\include;E:\ani\soci-3.1.0\soci-3.1.0\core;E:\ani\soci-3.1.0\soci-3.1.0;E:\ani\soci-3.1.0\soci-3.1.0\backends\sqlite3;E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql;E:\ani\soci-3.1.0\soci-3.1.0\backends\odbc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\ani\sqlite-amalgamation-3071000;E:\ani\libconfig-1.4.6\lib;E:\ani\ACE_wrappers\;E:\ani\boost_1_46_1\;cpptcl-1.1.3;F:\Tcl\include;E:\ani\MyCDR\MyCDR\sqrat;E:\ani\squirrel_3_0_2_stable\SQUIRREL3\include;E:\ani\soci-3.1.0\soci-3.1.0\core;E:\ani\soci-3.1.0\soci-3.1.0;E:\ani\soci-3.1.0\soci-3.1.0\backends\sqlite3;E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql;E:\ani\soci-3.1.0\soci-3.1.0\backends\odbc;F:/Program Files/MySQL/MySQL Server 5.5/include</AdditionalIncludeDirectories>
       <SmallerTypeCheck>false</SmallerTypeCheck>
       <MinimalRebuild>false</MinimalRebuild>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
@@ -58,7 +58,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libconfig++.lib;aced.lib;tcl85.lib;boost_filesystem-vc100-mt-gd-1_46_1.lib;squirrel.lib;sqstdlib.lib;soci_core_3_1.lib;soci_sqlite3_3_1.lib;soci_mysql_3_1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libconfig++.lib;aced.lib;tcl85.lib;boost_filesystem-vc100-mt-gd-1_46_1.lib;squirrel.lib;sqstdlib.lib;soci_core_3_1.lib;soci_sqlite3_3_1.lib;soci_mysql_3_1.lib;soci_odbc_3_1.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>E:\ani\ACE_wrappers\lib;E:\ani\libconfig-1.4.6\Debug;F:\Tcl\lib;E:\ani\boost_1_46_1\bin.v2\libs\system\build\msvc-10.0\debug\link-static\threading-multi;E:\ani\boost_1_46_1\bin.v2\libs\filesystem\build\msvc-10.0\debug\threading-multi;E:\ani\squirrel_3_0_2_stable\SQUIRREL3\lib;E:\ani\soci-3.1.0\soci-3.1.0\build\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -101,6 +101,8 @@
     <ClInclude Include="cpptcl-1.1.3\details\methods.h" />
     <ClInclude Include="cpptcl-1.1.3\details\methods_v.h" />
     <ClInclude Include="DBConfig.h" />
+    <ClInclude Include="DBConfigMySQL.h" />
+    <ClInclude Include="DBConfigODBC.h" />
     <ClInclude Include="DBConfigSQLLITE.h" />
     <ClInclude Include="DirMoniter.h" />
     <ClInclude Include="Driver.h" />
@@ -142,6 +144,8 @@
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
     </ClCompile>
     <ClCompile Include="DBConfig.cpp" />
+    <ClCompile Include="DBConfigMySQL.cpp" />
+    <ClCompile Include="DBConfigODBC.cpp" />
     <ClCompile Include="DBConfigSQLLITE.cpp" />
     <ClCompile Include="DirMoniter.cpp">
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
@@ -199,6 +203,7 @@
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
     </ClCompile>
     <ClCompile Include="tclsqlite3.c" />
+    <ClCompile Include="temp.cpp" />
     <ClCompile Include="UnitTest.cpp">
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
     </ClCompile>

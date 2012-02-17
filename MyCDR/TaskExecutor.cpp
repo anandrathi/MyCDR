@@ -10,6 +10,7 @@
 #include "GeneralRecord.h"
 #include "DirMoniter.h"
 #include "Logger.h"
+#include "Record.h"
 
 int TaskExecutor::staticTaskCount=0;
 
@@ -18,7 +19,6 @@ TaskExecutor::TaskExecutor(void)
 {
 	ACE_TRACE("TaskExecutor::TaskExecutor");
 	_pDirMoniter = 0;
-	//_ti =  tcli.get();
 	staticTaskCount++;
 	TaskCount=staticTaskCount;
 }
@@ -32,8 +32,6 @@ void TaskExecutor::DBCreateRate(void)
 	time_t ct;
 	time(&ct);
 	sprintf(str, "%04d_%ul",TaskCount, ct);
-	//Tclsqlite_Init(_ti);
-	//int DbMain(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv);
 
     rc = sqlite3_open_v2(str, &_db, SQLITE_OPEN_NOMUTEX| SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0 );
     if( rc )
@@ -152,7 +150,7 @@ TaskExecutor::svc (void)
 ACE_TRACE("TaskExecutor::svc");
 
 LoggerCallback * pLoggerCallback =  LoggerCallback::RegisterCallBack();
-pLoggerCallback->setLevelThread( this->_RecContMap._Record->getLogLevel() );
+pLoggerCallback->setLevelThread( this->_RecContMap._RecordDetails.LOGLEVEL  );
 while(1)
 {
 	ACE_Message_Block *mb;
@@ -271,13 +269,18 @@ void TaskExecutor::InitScript()
   pRecordTable = new Sqrat::Table(_vm);
   pRootTable->Bind(_SC("Record"), *pRecordTable);
   pScript = new Sqrat::Script(_vm);
-  this->_script_path = _RecContMap._RecordContainer->getScriptPath();
+  //this->_script_path = _RecContMap._RecordContainer->getScriptPath();
+  this->_script_path = _RecContMap._RecordDetails.SCRIPT;
   
-	Record::RECORDDATANAME::iterator it = _RecContMap._Record->_recordDataName.begin();
-	for(;it!=_RecContMap._Record->_recordDataName.end();it++)
+	//RECORD_MAP::iterator it = _RecContMap._Record->_recordDataName.begin();
+    //RECORD_MAP::iterator it = _RecContMap._Record->_recordDataName.begin();
+  RecordDetails::FIELDDETAILS::iterator it  = _RecContMap._RecordDetails.GetFieldDetails()->begin();
+  RecordDetails::FIELDDETAILS::iterator eit  = _RecContMap._RecordDetails.GetFieldDetails()->end();
+	//Record::RECORDDATANAME::iterator it = _RecContMap._Record->_recordDataName.begin();
+	for(; it!= eit  ;it++)
 	{
 		unsigned long  i=0;
-		SQChar *varName = (SQChar *)it->field.c_str();
+		SQChar *varName = (SQChar *)it->NAME.c_str();
 		SQChar *addr = const_cast<SQChar*>( "" ); 
 		pRecordTable->SetValue( varName, addr ); 
 	}

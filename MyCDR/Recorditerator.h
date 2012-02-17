@@ -13,7 +13,11 @@ protected:
 
 	friend class CharRecordIteraor;
 	friend class FileReader;
-	Recorditerator(void);
+	Recorditerator(RecordDetails*	pRecordDetails):_RecordDetails(pRecordDetails)
+	{
+		_RecordNumber=0;
+		_TotalRecords=0;
+	}
 	~Recorditerator(void);
 	char * _currentRowData;
 	char * _currentColData;
@@ -21,6 +25,7 @@ protected:
 	RECORDPOSITION _pos;
 	RECORDERROR _error;
 	unsigned long   _filesize;
+	RecordDetails* _RecordDetails;
 public:
 	virtual void begin(void)=0;
 	inline RECORDPOSITION now(void) {return _pos;}
@@ -32,7 +37,6 @@ public:
 	inline void setfilesize(unsigned long   filesize){_filesize=filesize ; }
 	inline unsigned long  getfilesize(void){return _filesize; }
 	inline 
-	virtual bool value(Record * & )=0;
 	virtual AR_INT64 Prev(void)=0;
 	virtual AR_INT64 Next(void)=0;
 	virtual AR_INT64 getPos(void)=0;
@@ -47,7 +51,8 @@ public:
 //	virtual void setTCLVar(void *)=0;
 	virtual void setSTRVar(std::map<std::string, std::string> &s)=0;
 	//virtual void setSTRVar(void * )=0;
-	virtual Record*	getRecord(void)=0;
+	virtual RecordDetails*	getRecordDetails(void){return _RecordDetails;};
+//	void SetRecordDetails(RecordDetails* pRecordDetails ) {_RecordDetails = pRecordDetails;}
 
 
 };

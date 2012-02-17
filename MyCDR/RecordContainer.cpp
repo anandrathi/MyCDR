@@ -3,7 +3,8 @@
 #include "CDRTypes.h"
 #include "ace/Log_Msg.h"
 
-RecordContainer::RecordContainer(void)
+#include "Record.h"
+RecordContainer::RecordContainer(RecordDetails * pRecordDetails ):_RecordDetails(pRecordDetails)
 {
 	ACE_TRACE("FileReader::ReadFullFile");
 
@@ -43,5 +44,5 @@ void RecordContainer::dump(void)
 	{
 		ACE_DEBUG ((LM_DEBUG, "(%t) RecordContainer _FileReader=%d \n",	_FileReader));
 	}
-	ACE_DEBUG((LM_DEBUG, "(%t) CharRecord path = %s  ; 	bufferSize+%d \n", _path.c_str() , 	_bufferSize ));
+	ACE_DEBUG((LM_DEBUG, "(%t) CharRecord path = %s  ; 	 \n", _path.c_str() ));
 }

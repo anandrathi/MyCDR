@@ -3,38 +3,29 @@
 #include "ace/Log_Msg.h"
 #include "FileReader.h"
 #include <vector>
-CharRecordContainer::CharRecordContainer(void)
+CharRecordContainer::CharRecordContainer(RecordDetails * pRecordDetails ):RecordContainer(pRecordDetails)
 {
 	ACE_TRACE("CharRecordContainer::CharRecordContainer");
-	RecordContainer::_Recorditerator = 	&ci; 
-	_pCharRecord=0;
-}
-
-void CharRecordContainer::setCharRecord(CharRecord* pCharRecord) 
-{
-	ACE_TRACE("CharRecordContainer::setCharRecord");
-	_pCharRecord=pCharRecord;
-	int len=0;
-	int fcnt=0;
-	CharRecord::_CVAL_MAP::iterator it = _pCharRecord->_value.begin();
-	ci.FIELDSEPERATOR=_pCharRecord->FIELDSEPERATOR;
-	ci.LINE_SEPERATOR=_pCharRecord->LINE_SEPERATOR;
+	RecordContainer::_Recorditerator = 	new CharRecordIteraor(pRecordDetails); 
+	
+	//int len=pRecordDetails->MAX_FIELD_LEN;
+	//int fieldcount=pRecordDetails->_Fielddetails.size();
 
 	//this->_recordholder.reserve(_pCharRecord->_value.size());
-	ACE_DEBUG ((LM_DEBUG, "(%t) CharRecordContainer record len=%d \n", len));
-	//_data.Init(len, fcnt, _pCharRecord->BUFFER_SIZE);
-	ci._CharRecord = _pCharRecord;
-	ci._RecordData_For_VarSize = &this->_data;
-
+	//ACE_DEBUG ((LM_DEBUG, "(%t) CharRecordContainer record len=%d \n", len));
+	//_data.Init(pRecordDetails->MAX_FIELD_LEN, fieldcount , pRecordDetails->BUFFER_SIZE);
+	//ci.SetRecordDetails( pRecordDetails ) ;
 }
 
 CharRecordContainer::~CharRecordContainer(void)
 {
+
 }
 
 int  CharRecordContainer::Populate(const std::string& p)
 {
 	ACE_TRACE("CharRecordContainer::Populate");
+	CharRecordIteraor & ci = *(CharRecordIteraor *)RecordContainer::_Recorditerator ; 
 	int ret = RecordContainer::Populate(p);
 	ACE_DEBUG ((LM_DEBUG, "(%t) ret(%d) = RecordContainer::Populate(p) \n", ret));
 	if(ret==-1) 
@@ -43,8 +34,8 @@ int  CharRecordContainer::Populate(const std::string& p)
 	}
 	_FileReader->size();
 	const char *data =  this->_FileReader->getData();
-	ci.setData(const_cast<char*>(data)) ; 
-	ci.setfilesize( this->_FileReader->size()); 
+	ci.setData( const_cast<char*>(data) ) ; 
+	ci.setfilesize( this->_FileReader->size() ); 
 	ACE_DEBUG ((LM_DEBUG, "(%t) filesize(%d) \n", ci.getfilesize()));
 	return ret;
 }
@@ -52,7 +43,8 @@ int  CharRecordContainer::Populate(const std::string& p)
 
 void CharRecordContainer::dump(void)
 {
-	ACE_DEBUG ((LM_DEBUG, "(%t) FixedRecordContainer \n"));
+	ACE_DEBUG ((LM_DEBUG, "(%t) CharRecordContainer \n"));
+	CharRecordIteraor & ci = *(CharRecordIteraor *)RecordContainer::_Recorditerator ; 
 	ci.dump();
 }
 

@@ -11,6 +11,7 @@
 #include <iostream>
 #include <string>
 #include <sqrat.h>
+#include "RecordFactory.h"
 
 UnitTest::UnitTest(void)
 {
@@ -123,15 +124,15 @@ bool UnitTest::TestCharRecordParse(void)
 
 bool TestCharIteratorN(void)
 {
-	CharRecordIteraor charRecorditerator;
+//	CharRecordIteraor charRecorditerator;
 	return false;
 }
 
 bool TestFixIteratorN(void)
 {
 	std::map<std::string, std::string> s;
-
-	FixedRecordIteraor fixRecorditerator;
+	RecordDetails fd;
+	FixedRecordIteraor fixRecorditerator(&fd);
 	
 	fixRecorditerator.setData("0001 2  3 4  5 6 7 8");
 		while(1) 
@@ -158,27 +159,24 @@ bool TestFixIteratorN(void)
 
 bool UnitTest::TestCharIterator(void)
 {
-	CharRecord * fr=0;
-	RecordFactory::RECORD_MAP::iterator itor =  RECORDFACTORY::instance()->_record_map.begin();
+	RecordDetails *fr=0;
+	RecordFactory::RECORD_MAP::iterator itor = RECORDFACTORY::instance()->_record_map.begin();
+	
 	for(;itor!=RECORDFACTORY::instance()->_record_map.end();itor++)
 	{
 		PathRecordPair t;
 		t._RecContMap._RecordContainer = itor->second._RecordContainer;
-		t._RecContMap._Record  = itor->second._Record;
+		t._RecContMap._RecordDetails = itor->second._RecordDetails;
 		if(itor->first=="CSV")
 		{
-			fr=dynamic_cast<CharRecord *>(t._RecContMap._Record);
+			fr= &t._RecContMap._RecordDetails;
 		}
 	}
-	CharRecordIteraor charRecordIteraor;
+	CharRecordIteraor charRecordIteraor(fr);
 	std::string dstr(" 000000001, 000000002, 000000003, 000000004 ,000000005 ,000000006 ,000000007 ,000000008\n 000000002 ,000000003 ,000000004 ,000000005 ,000000006 ,000000007 ,000000008 ,000000009");
 	charRecordIteraor.setData((char*)dstr.c_str());
-	charRecordIteraor._CharRecord = fr;
-	charRecordIteraor.setData((char*)dstr.c_str());
 	charRecordIteraor.setfilesize(dstr.length());
-	charRecordIteraor._CharRecord  = fr;
-	charRecordIteraor.LINE_SEPERATOR= fr->LINE_SEPERATOR;
-	charRecordIteraor.FIELDSEPERATOR= fr->FIELDSEPERATOR;
+
 	while(1) 
 	{
 		std::map<std::string, std::string> s;
@@ -204,25 +202,24 @@ bool UnitTest::TestCharIterator(void)
 
 bool UnitTest::TestFixIterator(void)
 {
-	FixedLocationRecord * fr=0;
-	RecordFactory::RECORD_MAP::iterator itor =  RECORDFACTORY::instance()->_record_map.begin();
+	
+	RecordDetails *fr=0;
+	RecordFactory::RECORD_MAP::iterator itor = RECORDFACTORY::instance()->_record_map.begin();
+
 	for(;itor!=RECORDFACTORY::instance()->_record_map.end();itor++)
 	{
 		PathRecordPair t;
 		t._RecContMap._RecordContainer = itor->second._RecordContainer;
-		t._RecContMap._Record  = itor->second._Record;
+		t._RecContMap._RecordDetails = itor->second._RecordDetails;
 		if(itor->first=="FIX")
 		{
-			fr=dynamic_cast<FixedLocationRecord * >(t._RecContMap._Record);
+			fr= &t._RecContMap._RecordDetails;
 		}
 	}
-	FixedRecordIteraor fixRecorditerator;
+	FixedRecordIteraor fixRecorditerator(fr);
 	std::string dstr(" 000000001 000000002 000000003 000000004 000000005 000000006 000000007 000000008\n 000000002 000000003 000000004 000000005 000000006 000000007 000000008 000000009");
 	fixRecorditerator.setData((char*)dstr.c_str());
 	fixRecorditerator.setfilesize(dstr.length());
-	fixRecorditerator._FixedLocationRecord = fr;
-	fixRecorditerator.LINE_SEPERATOR= fr->LINE_SEPERATOR;
-	fixRecorditerator._reclen = fixRecorditerator._FixedLocationRecord->getrecLen() ;
 
 	while(1) 
 	{
@@ -270,16 +267,18 @@ bool UnitTest::TestCharFileRead(void)
 			}
 
 			t._RecContMap._RecordContainer->Populate( it->string() );
-			Record::RECORDDATANAME::iterator it = t._RecContMap._RecordContainer->GetRecordIterator()->getRecord()->_recordDataName.begin();
-			Record::RECORDDATANAME::iterator ite =  t._RecContMap._RecordContainer->GetRecordIterator()->getRecord()->_recordDataName.end();
+			RecordDetails::FIELDDETAILS::iterator it = t._RecContMap._RecordDetails.GetFieldDetails()->begin();
+			RecordDetails::FIELDDETAILS::iterator eit = t._RecContMap._RecordDetails.GetFieldDetails()->end();
+			//Record::RECORDDATANAME::iterator it = t._RecContMap._RecordContainer->GetRecordIterator()->getRecord()->_recordDataName.begin();
+			//Record::RECORDDATANAME::iterator ite =  t._RecContMap._RecordContainer->GetRecordIterator()->getRecord()->_recordDataName.end();
 			std::cout << "";
 			int recno = 0;
-			for(;it!=ite;it++)
+			for(;it!=eit;it++)
 			{
 				recno++;
 				std::cout << recno << " : ";
-				std::cout << it->field << " : ";
-				std::cout << &it->cell[0] << " : ";
+				std::cout << it->NAME << " : ";
+				std::cout << &it->_RecordData.cell[0] << " : ";
 				//RecordDataName::DATACELL::iterator citend = it->cell.end();
 			}
 		}
@@ -303,59 +302,48 @@ bool UnitTest::TestMMapFileReader(void)
 
 bool UnitTest::TestCharRecord(void)
 {
-	REC_POS_VAL t;
-	CharRecord cr;
+	RecordDetails cr;
 	cr.FIELDSEPERATOR=',';
 	cr.LINE_SEPERATOR='\n';
 
-	t.pos=1; t.len=20; 
-	cr._value["CALLER_NUMBER"] =   t;
-	t.pos==2; t.len=20;
-	cr._value["CALLED_NUMBER"]  =   t;  	
-	t.pos=3; t.len=20;
-	cr._value["TIME"]  =   t;  			
-	t.pos=4; t.len=20;
-	cr._value["DURATION"]  =   t;  		
-	t.pos=5; t.len=20;
-	cr._value["CALLER_IMEI"]  =   t;  
-	t.pos=6; t.len=20;
-	cr._value["CALLED_IMEI"]  =   t;  	
-	t.pos=7; t.len=20;
-	cr._value["CALLER_MSC"]  =   t;  	
-	t.pos=8; t.len=20;
-	cr._value["CALLED_msc"]  =   t;  	
+	std::string fields[8] = {"CALLER_NUMBER" , "CALLED_NUMBER" , "TIME", "DURATION", "CALLER_IMEI", "CALLED_IMEI", "CALLER_MSC", "CALLED_msc" };	
+
+	cr.AddCVSField(fields[0] , 1 , 20, 1);
+	cr.AddCVSField(fields[1] , 2 , 20, 1);
+	cr.AddCVSField(fields[2], 3 , 20, 1);
+	cr.AddCVSField(fields[3], 4 , 20, 1);
+	cr.AddCVSField(fields[4], 5 , 20, 1);
+	cr.AddCVSField(fields[5], 6 , 20, 1);
+	cr.AddCVSField(fields[6], 7 , 20, 1);
+	cr.AddCVSField(fields[7], 8 , 20, 1);	
 	cr.MAX_FIELD_LEN=60;
-	cr.dump();
+
+	cr.dump(std::cout );
 	return true;
 }
 
 bool UnitTest::TestFixedRecordCOntainer(void)
 {
-	REC_POS_VAL t;
-	CharRecord cr;
-	cr.FIELDSEPERATOR=',';
-	cr.LINE_SEPERATOR='\n';
+	//REC_POS_VAL t;
+	//CharRecord cr;
+	RecordDetails cr;
+	cr.FIELDSEPERATOR=',' ;
+	cr.LINE_SEPERATOR='\n' ;
+	std::string fields[8] = {"CALLER_NUMBER" , "CALLED_NUMBER" , "TIME", "DURATION", "CALLER_IMEI", "CALLED_IMEI", "CALLER_MSC", "CALLED_msc" };	
 
-	t.pos=1; t.len=20; 
-	cr._value["CALLER_NUMBER"] =   t;
-	t.pos==2; t.len=20;
-	cr._value["CALLED_NUMBER"]  =   t;  	
-	t.pos=3; t.len=20;
-	cr._value["TIME"]  =   t;  			
-	t.pos=4; t.len=20;
-	cr._value["DURATION"]  =   t;  		
-	t.pos=5; t.len=20;
-	cr._value["CALLER_IMEI"]  =   t;  
-	t.pos=6; t.len=20;
-	cr._value["CALLED_IMEI"]  =   t;  	
-	t.pos=7; t.len=20;
-	cr._value["CALLER_MSC"]  =   t;  	
-	t.pos=8; t.len=20;
-	cr._value["CALLED_msc"]  =   t;  	
+	cr.AddFIXField(fields[0] , 1 , 20, 1);
+	cr.AddFIXField(fields[1] , 2 , 20, 1);
+	cr.AddFIXField(fields[2], 3 , 20, 1);
+	cr.AddFIXField(fields[3], 4 , 20, 1);
+	cr.AddFIXField(fields[4], 5 , 20, 1);
+	cr.AddFIXField(fields[5], 6 , 20, 1);
+	cr.AddFIXField(fields[6], 7 , 20, 1);
+	cr.AddFIXField(fields[7], 8 , 20, 1);	
+	
 	cr.MAX_FIELD_LEN=60;
 
-	FixedRecordContainer fc;
-	fc.setPath("C:\\temp\\char_cdr.txt");
+	FixedRecordContainer fc(&cr);
+	//fc.setPath("C:\\temp\\char_cdr.txt");
 	//fc.setFixedLocationRecord(&cr);
 	return false;
 }
@@ -363,32 +351,26 @@ bool UnitTest::TestFixedRecordCOntainer(void)
 
 bool UnitTest::TestCharRecordCOntainer(void)
 {
-	REC_POS_VAL t;
-	CharRecord cr;
+	//REC_POS_VAL t;
+	RecordDetails cr;
 	cr.FIELDSEPERATOR=',';
 	cr.LINE_SEPERATOR='\n';
 
-	t.pos=1; t.len=20; 
-	cr._value["CALLER_NUMBER"] =   t;
-	t.pos==2; t.len=20;
-	cr._value["CALLED_NUMBER"]  =   t;  	
-	t.pos=3; t.len=20;
-	cr._value["TIME"]  =   t;  			
-	t.pos=4; t.len=20;
-	cr._value["DURATION"]  =   t;  		
-	t.pos=5; t.len=20;
-	cr._value["CALLER_IMEI"]  =   t;  
-	t.pos=6; t.len=20;
-	cr._value["CALLED_IMEI"]  =   t;  	
-	t.pos=7; t.len=20;
-	cr._value["CALLER_MSC"]  =   t;  	
-	t.pos=8; t.len=20;
-	cr._value["CALLED_msc"]  =   t;  	
-	cr.MAX_FIELD_LEN=60;
+	std::string fields[8] = {"CALLER_NUMBER" , "CALLED_NUMBER" , "TIME", "DURATION", "CALLER_IMEI", "CALLED_IMEI", "CALLER_MSC", "CALLED_msc" };	
+
+	cr.AddCVSField(fields[0] , 1 , 20, 1);
+	cr.AddCVSField(fields[1] , 2 , 20, 1);
+	cr.AddCVSField(fields[2], 3 , 20, 1);
+	cr.AddCVSField(fields[3], 4 , 20, 1);
+	cr.AddCVSField(fields[4], 5 , 20, 1);
+	cr.AddCVSField(fields[5], 6 , 20, 1);
+	cr.AddCVSField(fields[6], 7 , 20, 1);
+	cr.AddCVSField(fields[7], 8 , 20, 1);	
 	
-	CharRecordContainer cc;
-	cc.setPath("C:\\temp\\char_cdr.txt");
-	cc.setCharRecord(&cr);
+	CharRecordContainer cc(&cr);
+	cc.Populate("C:\\temp\\char_cdr.txt");
+//	cc.setPath("C:\\temp\\char_cdr.txt");
+
 	return false;
 }
 #include "DirMoniter.h"

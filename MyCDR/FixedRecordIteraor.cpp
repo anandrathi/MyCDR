@@ -4,7 +4,7 @@
 #include "FixedLocationRecord.h"
 #include <sqrat.h>
 
-FixedRecordIteraor::FixedRecordIteraor(void)
+FixedRecordIteraor::FixedRecordIteraor(RecordDetails* pRecordDetails):Recorditerator(pRecordDetails)
 {
 	ACE_TRACE("FixedRecordIteraor::FixedRecordIteraor");
 	_data=0;
@@ -12,6 +12,14 @@ FixedRecordIteraor::FixedRecordIteraor(void)
 	_TotalRecords=0;
 	_currentRowData=_data;
 	_currentColData=_currentRowData;
+	_reclen=0;
+	RecordDetails::FIELDDETAILS::iterator it = _RecordDetails->GetFieldDetails()->begin();
+	RecordDetails::FIELDDETAILS::iterator eit = _RecordDetails->GetFieldDetails()->end();
+	for(;it !=eit ; it++ )
+	{
+		int len = (it->END - it->START) + 1;
+		_reclen+=len;
+	}
 
 }
 
@@ -20,11 +28,6 @@ FixedRecordIteraor::~FixedRecordIteraor(void)
 {
 }
 
-bool FixedRecordIteraor::value(Record * & )
-{
-
-	return true;
-}
 
 AR_INT64 FixedRecordIteraor::Prev(void)
 {
@@ -47,9 +50,10 @@ AR_INT64 FixedRecordIteraor::Next(void)
 	char * psCol=_currentRowData;
 	char * pe=_currentRowData;
 	char * end = _data + this->_filesize;
-	Record::RECORDDATANAME::iterator it = this->_FixedLocationRecord->_recordDataName.begin();
-	Record::RECORDDATANAME::iterator eit = this->_FixedLocationRecord->_recordDataName.end();
-	//int i = 0;
+	RecordDetails::FIELDDETAILS::iterator it = _RecordDetails->GetFieldDetails()->begin();
+	RecordDetails::FIELDDETAILS::iterator eit = _RecordDetails->GetFieldDetails()->end();
+	int LINE_SEPERATOR=_RecordDetails->LINE_SEPERATOR;
+
 	psCol=ps;
 	if ( _currentRowData >= end )	
 	{
@@ -59,7 +63,7 @@ AR_INT64 FixedRecordIteraor::Next(void)
 	int i =0;
 	while(1) 
 	{
-		if(*pe==this->LINE_SEPERATOR)
+		if(*pe==LINE_SEPERATOR)
 		{
 			break; 
 		}
@@ -94,8 +98,13 @@ AR_INT64 FixedRecordIteraor::Next(void)
 		_error=RECORDERROR::RECORDERROR_GOOD;
 		for(;it!= eit ;it++)
 		{
-			memcpy(&it->cell[0], psCol, it->len);
-			psCol+=it->len;
+			it->END-it->START;
+			if(it->_RecordData.cell.capacity() < it->_RecordData.len)
+			{
+				it->_RecordData.cell.resize(it->_RecordData.len+1+1, 0);
+			}
+			memcpy(&it->_RecordData.cell[0], psCol, it->_RecordData.len);
+			psCol+=it->_RecordData.len;
 		}
 	}
 	//if ( _currentRowData >= end )	
@@ -140,11 +149,11 @@ void FixedRecordIteraor::dump(void)
 void FixedRecordIteraor::setSTRVar(std::map<std::string, std::string> &s)
 {
 	ACE_TRACE("FixedRecordIteraor::setSTRVar");
-	Record::RECORDDATANAME::iterator it = _FixedLocationRecord->_recordDataName.begin();
-	for(;it!=_FixedLocationRecord->_recordDataName.end();it++)
+	RecordDetails::FIELDDETAILS::iterator it =  _RecordDetails->GetFieldDetails()->begin();
+	for(;it!=_RecordDetails->GetFieldDetails()->end();it++)
 	{
-		char *addr =  const_cast<char*>(it->cell.data()); 
-		s[it->field]=addr ;
+		char *addr =  const_cast<char*>(it->_RecordData.cell.data()); 
+		s[it->NAME]=addr ;
 	}
 
 }
@@ -172,15 +181,16 @@ void FixedRecordIteraor::InitScriptVar(void *p, void * s)
 void FixedRecordIteraor::setScriptVar(void *p)
 {
 	ACE_TRACE("FixedRecordIteraor::setScriptVar");
-	Record::RECORDDATANAME::iterator it = _FixedLocationRecord->_recordDataName.begin();
-	for(;it!=_FixedLocationRecord->_recordDataName.end();it++)
+	RecordDetails::FIELDDETAILS::iterator it =  _RecordDetails->GetFieldDetails()->begin();
+	//Record::RECORDDATANAME::iterator it = _FixedLocationRecord->_recordDataName.begin();
+	for(;it!=_RecordDetails->GetFieldDetails()->end();it++)
 	{
 		unsigned long  i=0;
 		//const char *varName = it->field.c_str();
 		//char *addr = const_cast<char*>(it->cell.data()); 
 
-		SQChar *varName = (SQChar *)it->field.c_str();
-		SQChar *addr = const_cast<SQChar*>(it->cell.data()); 
+		SQChar *varName = (SQChar *) it->NAME.c_str();
+		SQChar *addr = const_cast<SQChar*>( it->_RecordData.cell.data()  ); 
 		Sqrat::Table* pRecordTable = reinterpret_cast<Sqrat::Table *>(p);
 		//pConstTable->Const( varName, addr );
 		pRecordTable->SetValue( varName, addr ); 

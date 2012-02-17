@@ -5,7 +5,7 @@
 #include <sqrat.h>
 
 
-CharRecordIteraor::CharRecordIteraor(void)
+CharRecordIteraor::CharRecordIteraor(RecordDetails* pRecordDetails):Recorditerator(pRecordDetails)
 {
 	ACE_TRACE("CharRecordIteraor::CharRecordIteraor");
 	_data=0;
@@ -23,10 +23,10 @@ CharRecordIteraor::~CharRecordIteraor(void)
 }
 
 
- bool CharRecordIteraor::value(Record * & )
-{
-	 return false;
-}
+// bool CharRecordIteraor::value(Record * & )
+//{
+//	 return false;
+//}
 
  AR_INT64 CharRecordIteraor::Prev(void){ 
 
@@ -37,24 +37,24 @@ CharRecordIteraor::~CharRecordIteraor(void)
 
 void CharRecordIteraor::setSTRVar(std::map<std::string, std::string> &s)
 {
-	ACE_TRACE("FixedRecordIteraor::setSTRVar");
-	Record::RECORDDATANAME::iterator it = this->_CharRecord->_recordDataName.begin();
-	for(;it!=_CharRecord->_recordDataName.end();it++)
+	ACE_TRACE("CharRecordIteraor::setSTRVar");
+	RecordDetails::FIELDDETAILS::iterator it = this->_RecordDetails->GetFieldDetails()->begin();
+	for(;it!=this->_RecordDetails->GetFieldDetails()->end();it++)
 	{
-		char *addr = const_cast<char*>(it->cell.data() ); 
-		s[it->field]=addr ;
+		char *addr = const_cast<char*>(it->_RecordData.cell.data() ); 
+		s[it->NAME]=addr ;
 	}
 
 }
 
 void CharRecordIteraor::InitScriptVar(void *p, void * s)
 {
-	ACE_TRACE("FixedRecordIteraor::InitScriptVar");
-	Record::RECORDDATANAME::iterator it = _CharRecord->_recordDataName.begin();
-	for(;it!=_CharRecord->_recordDataName.end();it++)
+	ACE_TRACE("CharRecordIteraor::InitScriptVar");
+	RecordDetails::FIELDDETAILS::iterator  it = this->_RecordDetails->GetFieldDetails()->begin();
+	for(;it!=this->_RecordDetails->GetFieldDetails()->end();it++)
 	{
 		unsigned long  i=0;
-		SQChar *varName = (SQChar *)it->field.c_str();
+		SQChar *varName = (SQChar *)it->NAME.c_str();
 		SQChar *addr = const_cast<SQChar*>( "" ); 
 		Sqrat::Table* pRecordTable = reinterpret_cast<Sqrat::Table *>(p);
 		pRecordTable->SetValue( varName, addr ); 
@@ -67,38 +67,17 @@ void CharRecordIteraor::InitScriptVar(void *p, void * s)
 void CharRecordIteraor::setScriptVar(void * p)
 {
 	ACE_TRACE("CharRecordIteraor::setScriptVar");
-	Record::RECORDDATANAME::iterator it = _CharRecord->_recordDataName.begin();
-	for(;it!=_CharRecord->_recordDataName.end();it++)
+	RecordDetails::FIELDDETAILS::iterator  it = this->_RecordDetails->GetFieldDetails()->begin();
+	for( ; it != this->_RecordDetails->GetFieldDetails()->end(); it++)
 	{
 		unsigned long  i=0;
-		SQChar *varName = (SQChar *)it->field.c_str();
-		SQChar *addr = const_cast<SQChar*>(it->cell.data()); 
+		SQChar *varName = (SQChar *)it->NAME.c_str();
+		SQChar *addr = const_cast<SQChar*>(it->_RecordData.cell.data()); 
 		Sqrat::ConstTable* pConstTable = reinterpret_cast<Sqrat::ConstTable *>(p);
 		pConstTable->Const( varName, addr );
-		//int type =TCL_LINK_STRING | TCL_LINK_READ_ONLY;
-		//Tcl_Interp * _ti = (Tcl_Interp *)ptcl;
-		//char current_title_space[60];
-		//char *addr = it->cell.data(); 
-		//Tcl_LinkVar(_ti, varName, (char*)&addr, type);
 	}
 }
 
-
-//void CharRecordIteraor::setTCLVar(void * ptcl)
-//{
-//	ACE_TRACE("CharRecordIteraor::setTCLVar");
-//	Record::RECORDDATANAME::iterator it = _CharRecord->_recordDataName.begin();
-//	for(;it!=_CharRecord->_recordDataName.end();it++)
-//	{
-//		unsigned long  i=0;
-//		const char *varName = it->field.c_str();
-//		int type =TCL_LINK_STRING | TCL_LINK_READ_ONLY;
-//		Tcl_Interp * _ti = (Tcl_Interp *)ptcl;
-//		//char current_title_space[60];
-//		//char *addr = it->cell.data(); 
-//		//Tcl_LinkVar(_ti, varName, (char*)&addr, type);
-//	}
-//}
 
 void CharRecordIteraor::begin(void)
 {
@@ -114,8 +93,8 @@ void CharRecordIteraor::begin(void)
 	PARSESTATE s;
 	char * ps=_currentRowData;
 	char * pe=_currentRowData;
-	Record::RECORDDATANAME::iterator it = _CharRecord->_recordDataName.begin();
-	Record::RECORDDATANAME::iterator eit = _CharRecord->_recordDataName.end();
+	RecordDetails::FIELDDETAILS::iterator it  = _RecordDetails->GetFieldDetails()->begin();
+	RecordDetails::FIELDDETAILS::iterator eit = _RecordDetails->GetFieldDetails()->end();
 
 	_error=RECORDERROR::RECORDERROR_GOOD;
 	if (ps >= (this->_data + this->_filesize) )	
@@ -126,19 +105,20 @@ void CharRecordIteraor::begin(void)
 
 	for(; it!=eit ;it++)
 	{
-		it->cell[0]=0;
+		it->_RecordData.cell[0]=0;
 	}
-	for(it=_CharRecord->_recordDataName.begin(); it!=eit ;it++)
+
+	int FIELDSEPERATOR = this->_RecordDetails->FIELDSEPERATOR ;
+	int LINE_SEPERATOR  = this->_RecordDetails->LINE_SEPERATOR;
+	for(it=_RecordDetails->GetFieldDetails()->begin(); it!=eit ;it++)
 	{
 		unsigned long  i=0;
 		if ( (ps+i) >= (this->_data + this->_filesize) )	
 		{
 			_pos=Recorditerator::RECORDPOSITION_END;
 			return _pos;
-			//_pos = Recorditerator::RECORDPOSITION::RECORDPOSITION_OK;
-			//return _RecordNumber;
 		}
-		for(; ( ps[i]!=this->FIELDSEPERATOR && ps[i]!=this->LINE_SEPERATOR) && (ps+i< (this->_data + this->_filesize)); i++ )
+		for(; ( ps[i] != FIELDSEPERATOR && ps[i]!= LINE_SEPERATOR) && (ps+i< (this->_data + this->_filesize)); i++ )
 		{
 
 		}
@@ -149,25 +129,24 @@ void CharRecordIteraor::begin(void)
 			//return Recorditerator::RECORDERROR_BADLENGTH;
 		}
 		_error=RECORDERROR::RECORDERROR_GOOD;
-		if(ps[i]==this->FIELDSEPERATOR)
+		if(ps[i] == FIELDSEPERATOR )
 			s=FIELDEND;
-		if(ps[i]==this->LINE_SEPERATOR)
+		if(ps[i] == LINE_SEPERATOR )
 			s=LINEEND ;
 		if( (ps+i)>= (this->_data + this->_filesize))
 			s=FILEEND;
-		if( it->cell.size() < (i+1) )
-			it->cell.resize( i+1, 0);
-		char * pcell = const_cast<char*>( it->cell.data() );		
+		if( it->_RecordData.cell.size() < (i+1) )
+			it->_RecordData.cell.resize( i+1, 0);
+		char * pcell = const_cast<char*>( it->_RecordData.cell.data() );		
 		memcpy(pcell,ps,i);
 		pcell[i]=0;
-		if(ps[i]==this->FIELDSEPERATOR )
+		if(ps[i] == FIELDSEPERATOR )
 		{
 			_currentRowData = ps + i + 1;
 			ps = _currentRowData;
-			//ps = _currentRowData;
 			continue;
 		} 
-		if(ps[i]==this->LINE_SEPERATOR ) //ps[i]==this->FIELDSEPERATOR || 
+		if(ps[i] == LINE_SEPERATOR) 
 		{
 			_currentRowData = ps + i + 1;
 			ps = _currentRowData;

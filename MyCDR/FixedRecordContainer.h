@@ -7,12 +7,12 @@
 class FixedRecordContainer : public RecordContainer
 {
 protected:
-	FixedRecordIteraor fi;
+	//FixedRecordIteraor * _fi;
 	FixedLocationRecord* _pFixedLocationRecord;
 
 public:
-	void setFixedLocationRecord(FixedLocationRecord* pFixedLocationRecord);
-	FixedRecordContainer(void);
+//	void setFixedLocationRecord(FixedLocationRecord* pFixedLocationRecord);
+	FixedRecordContainer(RecordDetails * pRecordDetails );
 	~FixedRecordContainer(void);
 	virtual int Populate(const std::string& ) ;
 	void dump(void);

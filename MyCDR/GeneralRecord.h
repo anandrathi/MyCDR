@@ -27,6 +27,9 @@ public:
 	typedef std::map<std::string, GENREC_INFO> GVAL_MAP;
 	GVAL_MAP _value;
 	void dump(void);
+	
+	void push_back(const std::string&  key, std::string&  type, int len);
+
 	virtual const char *GetValue(const std::string&  key);
 	virtual bool  GetValueStr(const std::string&  key, std::string& );
 	void setSQLLITE(void *);

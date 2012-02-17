@@ -11,16 +11,16 @@ class FixedRecordIteraor :public Recorditerator
 	friend class FileReader;
 
 public:
-	char LINE_SEPERATOR ; 
+
 	FixedLocationRecord* _FixedLocationRecord;
 	//RecordData_For_VarSize * _RecordData_For_VarSize;
-	FixedRecordIteraor(void);
+	FixedRecordIteraor(RecordDetails*	pRecordDetails);
 	~FixedRecordIteraor(void);
 	int _reclen;
 public:
 //	FixedLocationRecord* _FixedLocationRecord;
 	virtual void begin(void);
-	virtual bool value(Record * & );
+//	virtual bool value(Record * & );
 	virtual AR_INT64 Prev(void);
 	virtual AR_INT64 Next(void);
 	virtual AR_INT64 getPos(void);
@@ -33,7 +33,7 @@ public:
 	virtual void setSTRVar(std::map<std::string, std::string> &s);
 	virtual void setScriptVar(void *);
 	virtual void InitScriptVar(void *p, void *s);
-	virtual Record*	getRecord(void){return _FixedLocationRecord;};
+
 public:
 };
 

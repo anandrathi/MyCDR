@@ -26,12 +26,10 @@ class CharRecordContainer : public RecordContainer
 {
 protected:
 	RecordData_For_VarSize _data;
-	CharRecordIteraor ci;
-	CharRecord* _pCharRecord;
+	CharRecordIteraor * _ci;
 
 public:
-	void setCharRecord(CharRecord* pCharRecord) ;
-	CharRecordContainer(void);
+	CharRecordContainer(RecordDetails * pRecordDetails );
 	~CharRecordContainer(void);
 	virtual int  Populate(const std::string& ) ;
 	void dump(void);

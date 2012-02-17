@@ -13,5 +13,5 @@
 ::print("\n")
 ::print("CALLER_MSC="+ Record.CALLER_MSC )
 ::print("\n")
-::print("CALLED_msc="+ Record.CALLED_msc )
+::print("CALLED_msc="+ Record.CALLED_MSC )
 ::print("\n")

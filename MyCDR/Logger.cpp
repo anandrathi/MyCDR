@@ -42,7 +42,7 @@ void LoggerCallback::log (ACE_Log_Record &log_record)
 	if(_logSize>=_MaxlogSize)
 	{
 		if(isFileOpen)
-		{	
+		{
 			_outStream.close();
 			isFileOpen=false;
 		}
@@ -64,6 +64,7 @@ void LoggerCallback::log (ACE_Log_Record &log_record)
 		/*ACE_OS::printf ("Recursive Logger callback = %s",
 						ACE_TEXT_ALWAYS_CHAR (log_record.msg_data ()));*/
 		_outStream <<  log_record.msg_data ();
+		std::cerr <<  log_record.msg_data ();
 	}
 	else
 	{
@@ -73,6 +74,7 @@ void LoggerCallback::log (ACE_Log_Record &log_record)
 		if (result == 0)
 		{
 			_outStream <<  verbose_msg;
+			std::cerr <<  log_record.msg_data ();
 		}
 	}
 
