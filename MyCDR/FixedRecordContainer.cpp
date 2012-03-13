@@ -11,7 +11,7 @@ FixedRecordContainer::FixedRecordContainer(RecordDetails * pRecordDetails ):Reco
 	//fi.SetRecordDetails( pRecordDetails );
 	//fi.LINE_SEPERATOR = _RecordDetails->LINE_SEPERATOR;
 	//this->_recordholder.reserve(_pCharRecord->_value.size());
-	ACE_DEBUG ((LM_DEBUG, "(%t) FixedRecordContainer record len=%d \n", len));
+	ACE_DEBUG ((LM_DEBUG, "(%D)(%t) FixedRecordContainer record len=%d \n", len));
 	//_data.Init(len, fcnt, _pCharRecord->BUFFER_SIZE);
 	//fi._FixedLocationRecord = _pFixedLocationRecord;
 	//fi._reclen = fi._FixedLocationRecord->getrecLen();
@@ -26,10 +26,10 @@ FixedRecordContainer::~FixedRecordContainer(void)
 
 int  FixedRecordContainer::Populate(const std::string& p)
 {
-	ACE_TRACE("FixedRecordContainer::Populate");
+	ACE_TRACE("(%D)(%t) FixedRecordContainer::Populate");
 	FixedRecordIteraor & fi = *(FixedRecordIteraor *)RecordContainer::_Recorditerator ;
 	int ret = RecordContainer::Populate(p);
-	ACE_DEBUG ((LM_DEBUG, "(%t) ret(%d) = RecordContainer::Populate(p) \n", ret));
+	ACE_DEBUG ((LM_DEBUG, "(%D)(%t) ret(%d) = RecordContainer::Populate(p) \n", ret));
 
 	if(ret==-1) 
 	{
@@ -41,13 +41,13 @@ int  FixedRecordContainer::Populate(const std::string& p)
 	fi.setData(const_cast<char*>(data)) ; 
 	fi.setfilesize(this->_FileReader->size()); 
 	
-	ACE_DEBUG ((LM_DEBUG, "(%t) filesize(%d) \n", fi.getfilesize()));
+	ACE_DEBUG ((LM_DEBUG, "(%D)(%t) filesize(%d) \n", fi.getfilesize()));
 	return ret;
 }
 
 void FixedRecordContainer::dump(void)
 {
 	FixedRecordIteraor &fi = *(FixedRecordIteraor *)RecordContainer::_Recorditerator ;
-	ACE_DEBUG ((LM_DEBUG, "(%t) FixedRecordContainer \n"));
+	ACE_DEBUG ((LM_DEBUG, "(%D)(%t) FixedRecordContainer \n"));
 	fi.dump();
 }

@@ -10,5 +10,5 @@ Recorditerator::~Recorditerator(void)
 
 void Recorditerator::dump(void)
 {
-	ACE_DEBUG ((LM_DEBUG, "(%t) Recorditerator\n"));
+	ACE_DEBUG ((LM_DEBUG, "(%D)(%t) Recorditerator\n"));
 }

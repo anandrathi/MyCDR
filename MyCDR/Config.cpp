@@ -17,7 +17,7 @@ Config::~Config(void)
 
 void Config::dump()
 {
-	ACE_DEBUG ((LM_DEBUG, "(%t)  iFILESCANTIMEOUT =  %d \n", iFILESCANTIMEOUT));
+	ACE_DEBUG ((LM_DEBUG, "(%D)(%t)  iFILESCANTIMEOUT =  %d \n", iFILESCANTIMEOUT));
 	//ACE_Log_Msg * plog = ACE_Log_Msg::instance ();
 	//FILE * f =  FILE *fdopen(stdout, "w");
 	//cfg.write();
@@ -29,7 +29,7 @@ libconfig::Setting *  Config::GetSettings(const char * node)
 	//libconfig::Setting &root = *this->root;//cfg.getRoot();
 	if(root==0)
 	{
-		ACE_DEBUG ((LM_DEBUG, "(%t)  Config::GetSettings return null \n" ));
+		ACE_DEBUG ((LM_DEBUG, "(%D)(%t)  Config::GetSettings return null \n" ));
 		return 0;
 	}
   if(! root->exists(node)) 
@@ -50,7 +50,7 @@ bool  Config::GetLong(const char * node, long * i)
 	//libconfig::Setting &root = *this->root;//cfg.getRoot();
 	if(root==0)
 	{
-		ACE_DEBUG ((LM_DEBUG, "(%t)  Config::GetSettings return null \n" ));
+		ACE_DEBUG ((LM_DEBUG, "(%D)(%t)  Config::GetSettings return null \n" ));
 		return false;
 	}
   if(! root->exists(node)) 
@@ -69,7 +69,7 @@ bool Config::GetRootLogLevel(unsigned int* level)
 	ACE_TRACE("Config::GetLogLevel");
 	if(root==0)
 	{
-		ACE_DEBUG ((LM_DEBUG, "(%t)  Config::GetLogLevel return null \n" ));
+		ACE_DEBUG ((LM_DEBUG, "(%D)(%t)  Config::GetLogLevel return null \n" ));
 		return false;
 	}
   if(! root->exists("LOGLEVEL")) 
@@ -97,7 +97,7 @@ bool Config::GetLogLevel(libconfig::Setting &setting, unsigned int* level)
 	ACE_TRACE("Config::GetLogLevel");
 	if(root==0)
 	{
-		ACE_DEBUG ((LM_DEBUG, "(%t)  Config::GetLogLevel return null \n" ));
+		ACE_DEBUG ((LM_DEBUG, "(%D)(%t)  Config::GetLogLevel return null \n" ));
 		return false;
 	}
   if(! setting.exists("LOGLEVEL")) 
@@ -129,7 +129,7 @@ bool  Config::GetInt(const char * node, int * i)
 	//libconfig::Setting &root = *this->root;//cfg.getRoot();
 	if(root==0)
 	{
-		ACE_DEBUG ((LM_DEBUG, "(%t)  Config::GetInt return null \n" ));
+		ACE_DEBUG ((LM_DEBUG, "(%D)(%t)  Config::GetInt return null \n" ));
 		return false;
 	}
   if(! root->exists(node)) 
@@ -156,7 +156,7 @@ bool  Config::GetDouble(const char * node, double  *d)
 	//libconfig::Setting &root = *this->root;//cfg.getRoot();
 	if(root==0)
 	{
-		ACE_DEBUG ((LM_DEBUG, "(%t)  Config::GetDouble return null \n" ));
+		ACE_DEBUG ((LM_DEBUG, "(%D)(%t)  Config::GetDouble return null \n" ));
 		return false;
 	}
   if(! root->exists(node)) 
@@ -179,7 +179,7 @@ bool  Config::GetString(const char * node, std::string * s)
 	//libconfig::Setting &root = *this->root;//cfg.getRoot();
 	if(root==0)
 	{
-		ACE_DEBUG ((LM_DEBUG, "(%t)  Config::GetString return null \n" ));
+		ACE_DEBUG ((LM_DEBUG, "(%D)(%t)  Config::GetString return null \n" ));
 		return false;
 	}
   if(! root->exists(node)) 
@@ -201,7 +201,7 @@ bool Config::InitiFILESCANTIMEOUT(void)
 	//libconfig::Setting &root = *this->root;//cfg.getRoot();
 	if(root==0)
 	{
-		ACE_DEBUG ((LM_DEBUG, "(%t)  Config::InitiFILESCANTIMEOUT return null \n" ));
+		ACE_DEBUG ((LM_DEBUG, "(%D)(%t)  Config::InitiFILESCANTIMEOUT return null \n" ));
 		return false;
 	}
 	if(! root->exists("FILESCANTIMEOUT")) 
@@ -283,18 +283,18 @@ bool Config::Init(void)
 	}
 	catch(const libconfig::FileIOException &fioex)
 	{	
-		ACE_DEBUG ((LM_DEBUG, "(%t) Config::Init I/O error while reading file. %s\n", fioex.what() ));
+		ACE_DEBUG ((LM_DEBUG, "(%D)(%t) Config::Init I/O error while reading file. %s\n", fioex.what() ));
 		std::cerr << "I/O error while reading file." << fioex.what() << std::endl;
 		return(EXIT_FAILURE);
 	}
 	catch(const libconfig::ParseException &pex)
 	{
-		ACE_DEBUG ((LM_DEBUG, "(%t)  Parse error at  %s : %d : %s\n", pex.getFile(), pex.getLine()	, pex.getError() ));
+		ACE_DEBUG ((LM_DEBUG, "(%D)(%t)  Parse error at  %s : %d : %s\n", pex.getFile(), pex.getLine()	, pex.getError() ));
 		std::cerr << "Parse error at " << pex.getFile() << ":" << pex.getLine()
 					<< " - " << pex.getError() << std::endl;
 		return(EXIT_FAILURE);
 	}
 	InitiFILESCANTIMEOUT();
-	ACE_DEBUG ((LM_DEBUG, "(%t)  iFILESCANTIMEOUT =  %d \n", iFILESCANTIMEOUT));
+	ACE_DEBUG ((LM_DEBUG, "(%D)(%t)  iFILESCANTIMEOUT =  %d \n", iFILESCANTIMEOUT));
   isInit=true;
 }

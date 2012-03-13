@@ -1,0 +1,30 @@
+﻿Build started 17/02/2011 12:26:46 PM.
+     1>Project "E:\ani\soci-3.0.0\build\msvc80\lib\empty.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "empty\Debug\empty.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\..\src\core /I..\..\..\src\core\test /I"c:\usr\boost-1.33.1\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"empty\Debug\\" /Fd"empty\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\backends\empty\blob.cpp ..\..\..\src\backends\empty\factory.cpp "..\..\..\src\backends\empty\row-id.cpp" ..\..\..\src\backends\empty\session.cpp "..\..\..\src\backends\empty\standard-into-type.cpp" "..\..\..\src\backends\empty\standard-use-type.cpp" ..\..\..\src\backends\empty\statement.cpp "..\..\..\src\backends\empty\vector-into-type.cpp" "..\..\..\src\backends\empty\vector-use-type.cpp"
+         vector-use-type.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\src\backends\empty\vector-use-type.cpp': No such file or directory
+         vector-into-type.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\src\backends\empty\vector-into-type.cpp': No such file or directory
+         statement.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\src\backends\empty\statement.cpp': No such file or directory
+         standard-use-type.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\src\backends\empty\standard-use-type.cpp': No such file or directory
+         standard-into-type.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\src\backends\empty\standard-into-type.cpp': No such file or directory
+         session.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\src\backends\empty\session.cpp': No such file or directory
+         row-id.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\src\backends\empty\row-id.cpp': No such file or directory
+         factory.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\src\backends\empty\factory.cpp': No such file or directory
+         blob.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\src\backends\empty\blob.cpp': No such file or directory
+         Generating Code...
+     1>Done Building Project "E:\ani\soci-3.0.0\build\msvc80\lib\empty.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.37

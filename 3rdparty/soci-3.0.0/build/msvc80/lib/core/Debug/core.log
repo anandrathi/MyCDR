@@ -1,0 +1,53 @@
+﻿Build started 17/02/2011 12:25:45 PM.
+     1>Project "E:\ani\soci-3.0.0\build\msvc80\lib\core.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "core\Debug\core.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\..\src\core /I..\..\..\src\core\test /I"c:\usr\boost-1.33.1\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"core\Debug\\" /Fd"core\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\..\src\core\backend-loader.cpp" ..\..\..\src\core\blob.cpp "..\..\..\src\core\connection-pool.cpp" ..\..\..\src\core\error.cpp "..\..\..\src\core\into-type.cpp" "..\..\..\src\core\once-temp-type.cpp" "..\..\..\src\core\prepare-temp-type.cpp" ..\..\..\src\core\procedure.cpp "..\..\..\src\core\ref-counted-prepare-info.cpp" "..\..\..\src\core\ref-counted-statement.cpp" ..\..\..\src\core\row.cpp ..\..\..\src\core\rowid.cpp ..\..\..\src\core\session.cpp ..\..\..\src\core\statement.cpp ..\..\..\src\core\transaction.cpp "..\..\..\src\core\use-type.cpp" ..\..\..\src\core\values.cpp
+         values.cpp
+         use-type.cpp
+         transaction.cpp
+         statement.cpp
+         session.cpp
+         rowid.cpp
+         row.cpp
+         ref-counted-statement.cpp
+         ref-counted-prepare-info.cpp
+         procedure.cpp
+         prepare-temp-type.cpp
+         once-temp-type.cpp
+         into-type.cpp
+         error.cpp
+         connection-pool.cpp
+         blob.cpp
+         backend-loader.cpp
+         Generating Code...
+     1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1151,5): warning MSB8012: TargetPath(E:\ani\soci-3.0.0\build\msvc80\lib\Debug\core.lib) does not match the Library's OutputFile property value (E:\ani\soci-3.0.0\build\msvc80\lib\Debug\libsoci_core-vc80-d-2_2.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1153,5): warning MSB8012: TargetName(core) does not match the Library's OutputFile property value (libsoci_core-vc80-d-2_2). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"E:\ani\soci-3.0.0\build\msvc80\lib\Debug\libsoci_core-vc80-d-2_2.lib" /NOLOGO "core\Debug\backend-loader.obj"
+         core\Debug\blob.obj
+         "core\Debug\connection-pool.obj"
+         core\Debug\error.obj
+         "core\Debug\into-type.obj"
+         "core\Debug\once-temp-type.obj"
+         "core\Debug\prepare-temp-type.obj"
+         core\Debug\procedure.obj
+         "core\Debug\ref-counted-prepare-info.obj"
+         "core\Debug\ref-counted-statement.obj"
+         core\Debug\row.obj
+         core\Debug\rowid.obj
+         core\Debug\session.obj
+         core\Debug\statement.obj
+         core\Debug\transaction.obj
+         "core\Debug\use-type.obj"
+         core\Debug\values.obj
+         core.vcxproj -> E:\ani\soci-3.0.0\build\msvc80\lib\Debug\core.lib
+       FinalizeBuildStatus:
+         Deleting file "core\Debug\core.unsuccessfulbuild".
+         Touching "core\Debug\core.lastbuildstate".
+     1>Done Building Project "E:\ani\soci-3.0.0\build\msvc80\lib\core.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:13.95

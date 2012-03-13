@@ -53,7 +53,7 @@
 //
 // void FixedLocationRecord::dump(void)
 //{
-//	ACE_DEBUG ((LM_DEBUG, "(%t) FixedLocationRecord LINE_SEPERATOR=%c: NUMBER_OF_FIELDS=%d :  \n",	
+//	ACE_DEBUG ((LM_DEBUG, "(%D)(%t) FixedLocationRecord LINE_SEPERATOR=%c: NUMBER_OF_FIELDS=%d :  \n",	
 //		(char)LINE_SEPERATOR , 
 //		NUMBER_OF_FIELDS 
 //		));

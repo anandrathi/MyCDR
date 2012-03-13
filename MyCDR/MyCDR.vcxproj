@@ -58,8 +58,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libconfig++.lib;aced.lib;tcl85.lib;boost_filesystem-vc100-mt-gd-1_46_1.lib;squirrel.lib;sqstdlib.lib;soci_core_3_1.lib;soci_sqlite3_3_1.lib;soci_mysql_3_1.lib;soci_odbc_3_1.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>E:\ani\ACE_wrappers\lib;E:\ani\libconfig-1.4.6\Debug;F:\Tcl\lib;E:\ani\boost_1_46_1\bin.v2\libs\system\build\msvc-10.0\debug\link-static\threading-multi;E:\ani\boost_1_46_1\bin.v2\libs\filesystem\build\msvc-10.0\debug\threading-multi;E:\ani\squirrel_3_0_2_stable\SQUIRREL3\lib;E:\ani\soci-3.1.0\soci-3.1.0\build\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libconfig++.lib;aced.lib;tcl85.lib;boost_filesystem-vc100-mt-gd-1_46_1.lib;squirrel.lib;sqstdlib.lib;soci_core_3_1.lib;soci_sqlite3_3_1.lib;soci_mysql_3_1.lib;soci_odbc_3_1.lib;boost_date_time-vc100-mt-gd-1_46_1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\ani\ACE_wrappers\lib;E:\ani\libconfig-1.4.6\Debug;F:\Tcl\lib;E:\ani\boost_1_46_1\bin.v2\libs\system\build\msvc-10.0\debug\link-static\threading-multi;E:\ani\boost_1_46_1\bin.v2\libs\filesystem\build\msvc-10.0\debug\threading-multi;E:\ani\squirrel_3_0_2_stable\SQUIRREL3\lib;E:\ani\soci-3.1.0\soci-3.1.0\build\lib\Debug;E:\ani\boost_1_46_1\bin.v2\libs\date_time\build\msvc-10.0\debug\link-static\threading-multi;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -115,6 +115,7 @@
     <ClInclude Include="Logger.h" />
     <ClInclude Include="MMapFileReader.h" />
     <ClInclude Include="MyCDRBASE.h" />
+    <ClInclude Include="MyDateTime.h" />
     <ClInclude Include="Record.h" />
     <ClInclude Include="RecordContainer.h" />
     <ClInclude Include="RecordContainerFactory.h" />
@@ -181,6 +182,7 @@
     <ClCompile Include="MyCDRBASE.cpp">
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
     </ClCompile>
+    <ClCompile Include="MyDateTime.cpp" />
     <ClCompile Include="Record.cpp">
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
     </ClCompile>
@@ -196,8 +198,16 @@
     <ClCompile Include="Recorditerator.cpp">
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
     </ClCompile>
+    <ClCompile Include="ReghisterInScript.cpp">
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Level4</WarningLevel>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</CompileAs>
+    </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
+    </ClCompile>
+    <ClCompile Include="strptime.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="TaskExecutor.cpp">
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>

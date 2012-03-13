@@ -1,0 +1,154 @@
+﻿  sqlite3.c
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(20903): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(20905): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(20910): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32201): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'AreFileApisANSI' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(10430) : see declaration of 'AreFileApisANSI'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32224): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'CloseHandle' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(5068) : see declaration of 'CloseHandle'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32229): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'CreateFileA' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(9269) : see declaration of 'CreateFileA'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32238): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'CreateFileW' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(9282) : see declaration of 'CreateFileW'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32246): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'CreateFileMappingA' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(7024) : see declaration of 'CreateFileMappingA'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32252): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'CreateFileMappingW' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(7036) : see declaration of 'CreateFileMappingW'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32261): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'CreateMutexW' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(6672) : see declaration of 'CreateMutexW'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32270): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'DeleteFileA' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(9523) : see declaration of 'DeleteFileA'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32278): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'DeleteFileW' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(9529) : see declaration of 'DeleteFileW'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32303): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'FlushFileBuffers' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(4929) : see declaration of 'FlushFileBuffers'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32308): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'FormatMessageA' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(5687) : see declaration of 'FormatMessageA'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32317): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'FormatMessageW' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(5699) : see declaration of 'FormatMessageW'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32325): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'FreeLibrary' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(2611) : see declaration of 'FreeLibrary'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32329): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetCurrentProcessId' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(3500) : see declaration of 'GetCurrentProcessId'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32334): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetDiskFreeSpaceA' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(8981) : see declaration of 'GetDiskFreeSpaceA'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32343): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetDiskFreeSpaceW' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(8991) : see declaration of 'GetDiskFreeSpaceW'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32352): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetFileAttributesA' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(9378) : see declaration of 'GetFileAttributesA'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32360): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetFileAttributesW' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(9384) : see declaration of 'GetFileAttributesW'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32368): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetFileAttributesExW' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(9463) : see declaration of 'GetFileAttributesExW'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32376): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetFileSize' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(4862) : see declaration of 'GetFileSize'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32381): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetFullPathNameA' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(9163) : see declaration of 'GetFullPathNameA'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32390): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetFullPathNameW' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(9172) : see declaration of 'GetFullPathNameW'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32398): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetLastError' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(4255) : see declaration of 'GetLastError'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32408): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetProcAddress' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(2635) : see declaration of 'GetProcAddress'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32414): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetSystemInfo' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(5422) : see declaration of 'GetSystemInfo'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32418): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetSystemTime' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(5387) : see declaration of 'GetSystemTime'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32423): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetSystemTimeAsFileTime' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(5394) : see declaration of 'GetSystemTimeAsFileTime'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32432): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetTempPathA' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(8667) : see declaration of 'GetTempPathA'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32440): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetTempPathW' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(8674) : see declaration of 'GetTempPathW'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32447): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetTickCount' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(5651) : see declaration of 'GetTickCount'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32452): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'GetVersionExA' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(13645) : see declaration of 'GetVersionExA'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32460): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'HeapAlloc' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(3116) : see declaration of 'HeapAlloc'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32465): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'HeapCreate' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(3099) : see declaration of 'HeapCreate'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32470): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'HeapDestroy' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(3108) : see declaration of 'HeapDestroy'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32474): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'HeapFree' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(3136) : see declaration of 'HeapFree'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32478): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'HeapReAlloc' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(3126) : see declaration of 'HeapReAlloc'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32483): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'HeapSize' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(3145) : see declaration of 'HeapSize'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32488): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'HeapValidate' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(3154) : see declaration of 'HeapValidate'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32494): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'LoadLibraryA' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(7160) : see declaration of 'LoadLibraryA'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32502): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'LoadLibraryW' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(7167) : see declaration of 'LoadLibraryW'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32509): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'LocalFree' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(2832) : see declaration of 'LocalFree'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32514): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'LockFile' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(4786) : see declaration of 'LockFile'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32523): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'LockFileEx' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(4808) : see declaration of 'LockFileEx'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32531): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'MapViewOfFile' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(5875) : see declaration of 'MapViewOfFile'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32536): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'MultiByteToWideChar' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winnls.h(1348) : see declaration of 'MultiByteToWideChar'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32541): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'QueryPerformanceCounter' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(13629) : see declaration of 'QueryPerformanceCounter'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32546): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'ReadFile' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(4918) : see declaration of 'ReadFile'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32551): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'SetEndOfFile' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(4980) : see declaration of 'SetEndOfFile'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32555): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'SetFilePointer' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(4987) : see declaration of 'SetFilePointer'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32560): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'Sleep' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(4726) : see declaration of 'Sleep'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32564): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'SystemTimeToFileTime' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(5592) : see declaration of 'SystemTimeToFileTime'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32570): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'UnlockFile' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(4797) : see declaration of 'UnlockFile'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32579): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'UnlockFileEx' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(4823) : see declaration of 'UnlockFileEx'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32587): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'UnmapViewOfFile' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(5894) : see declaration of 'UnmapViewOfFile'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32591): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'WideCharToMultiByte' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winnls.h(1359) : see declaration of 'WideCharToMultiByte'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(32596): warning C4232: nonstandard extension used : 'pCurrent' : address of dllimport 'WriteFile' is not static, identity not guaranteed
+          C:\Program Files\Microsoft SDKs\Windows\v7.0A\include\winbase.h(4907) : see declaration of 'WriteFile'
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(40945): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(43941): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(43950): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(51106): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(51207): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(54873): warning C4244: '-=' : conversion from 'int' to 'u16', possible loss of data
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(55224): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(60911): warning C4244: '=' : conversion from 'int' to 'ynVar', possible loss of data
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(69523): warning C4244: '=' : conversion from 'int' to 'u8', possible loss of data
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(75266): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(81680): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(81817): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(81823): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(81841): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(81847): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(83019): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(83181): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(83192): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(83684): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(84079): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(84631): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(89797): warning C4244: 'function' : conversion from 'int' to 'u8', possible loss of data
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(90736): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(92689): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(92689): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(92689): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(93036): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(93651): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(93681): warning C4127: conditional expression is constant
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(100922): warning C4244: 'function' : conversion from 'int' to 'u8', possible loss of data
+..\..\..\..\..\sqlite-amalgamation-3071000\sqlite3.c(114135): warning C4244: '=' : conversion from 'int' to 'char', possible loss of data
+e:\ani\sqlite-amalgamation-3071000\sqlite3.c(35257): warning C4701: potentially uninitialized local variable 'lastErrno' used
+e:\ani\sqlite-amalgamation-3071000\sqlite3.c(35292): warning C4706: assignment within conditional expression
+e:\ani\sqlite-amalgamation-3071000\sqlite3.c(35306): warning C4701: potentially uninitialized local variable 'lastErrno' used
+e:\ani\sqlite-amalgamation-3071000\sqlite3.c(41286): warning C4706: assignment within conditional expression
+e:\ani\sqlite-amalgamation-3071000\sqlite3.c(101946): warning C4706: assignment within conditional expression
+     Creating library E:/ani/soci-3.1.0/soci-3.1.0/build/lib/Debug/soci_sqlite3_3_1.lib and object E:/ani/soci-3.1.0/soci-3.1.0/build/lib/Debug/soci_sqlite3_3_1.exp
+  soci_sqlite3.vcxproj -> E:\ani\soci-3.1.0\soci-3.1.0\build\bin\Debug\soci_sqlite3_3_1.dll

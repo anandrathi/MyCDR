@@ -12,6 +12,47 @@
 #include <string>
 #include <sqrat.h>
 #include "RecordFactory.h"
+#include <time.h>
+#include "boost/date_time/posix_time/posix_time.hpp"
+#include <boost/date_time/local_time/local_time.hpp>
+#include <iostream>
+#include "MyDateTime.h"
+
+
+bool UnitTest::TestMyDate(void)
+{
+	time_t _t;
+	std::string tz = "IN";
+	MyDateTime mydate ;
+	_t = time(&_t);
+	std::string sfmt = "%Y%m%d %H:%M:%S %ZP";
+	std::string sdt = "20110308 08:13:10 EDT-05EDT,M4.1.0,M10.5.0";
+	std::string sofmt = "%d - %m - %Y %H:%M:%S %z";
+	std::stringstream ss;
+
+	boost::local_time::local_time_facet* output_facet = new boost::local_time::local_time_facet();
+	boost::local_time::local_time_input_facet* input_facet = new boost::local_time::local_time_input_facet();
+	ss.imbue(std::locale(std::locale::classic(), output_facet));
+	ss.imbue(std::locale(ss.getloc(), input_facet));
+	ss << sdt;
+
+	boost::local_time::local_date_time ldt(boost::local_time::not_a_date_time);
+	ss >> ldt;
+	std::string z = ldt.zone_as_posix_string();
+	mydate.setFormatedtime(sfmt,sdt); 
+	std::string soutdate = mydate.getFormatedtime(sofmt );
+//	MyDate mydate2(boost::posix_time::from_time_t(_t)) ;
+	boost::posix_time::ptime  pt = boost::posix_time::second_clock::local_time();
+//	MyDateTime mydate3(tz,pt); 
+//	soutdate = mydate3.getFormatedtime(sofmt );
+//	MyDateTime mydate4(tz, sfmt,  sdt);
+//	soutdate = mydate4.getFormatedtime(sofmt );
+	
+
+
+
+return true;
+}
 
 UnitTest::UnitTest(void)
 {
@@ -28,6 +69,131 @@ UnitTest::~UnitTest(void)
 }
 void printfunc(HSQUIRRELVM v,const SQChar *s,...) ;
 SQInteger errorhandler(HSQUIRRELVM v);
+
+
+class Employee {
+public:
+    Employee()  {}
+
+ //   Employee(const Employee& e) :
+	//{
+
+ //   }
+
+    void GiveRaise(float percent) {
+        //wage += (wage * percent);
+    }
+
+    const std::string ToString() const {
+		std::string s; 
+        return s;
+    }
+
+	int  _NUMBER1;
+	int  _NUMBER2;
+	std::string   _STRINGS1;
+	std::string   _STRINGS2;
+	MyDateTime _DATETIME1;
+	MyDateTime _DATETIME2;
+	//std::map<std::string , std::string > _STRING;
+};
+
+
+void RegisterInScripts(	HSQUIRRELVM _vm, Sqrat::RootTable * pRootTable );
+
+bool UnitTest::TestScriptClassObject(void)
+{
+
+  HSQUIRRELVM _vm = sq_open(1024);
+#if SQUIRREL_VERSION_NUMBER >= 300
+  sq_setprintfunc(_vm, printfunc, printfunc);
+//  sq_setprintfunc(_vm, (SQPRINTFUNCTION)printf , (SQPRINTFUNCTION)printf );
+#else
+  sq_setprintfunc(_vm, printfunc);
+//  sq_setprintfunc(_vm, (SQPRINTFUNCTION)printf );
+#endif
+
+  sq_newclosure(_vm, errorhandler,0);
+  sq_seterrorhandler(_vm);
+  char * names = "MyName" ;
+  char * vals[] = {"Anand1" , "Anand2" , "Anand3" , "Anand4" , "Anand5"  };
+  SQChar *varName = const_cast<SQChar*>(names);
+//  Sqrat::Table test(_vm);
+  Sqrat::RootTable mRootTable(_vm);
+
+
+  //Employee e;
+  //e._NUMBER[0] = 1;
+  //e._NUMBER[1] = 2;
+
+  //e._STRINGS[0] = "s1";
+  //e._STRINGS[1] = "s2";
+
+  try{
+  	  //Sqrat::ConstTable mConstTable(_vm);
+
+  	typedef int Employee::* ENum;
+	int Employee::* en[3] = { &Employee::_NUMBER1 , &Employee::_NUMBER2, 0 };
+	typedef std::string Employee::* EStr;
+	std::string Employee::* es[3] =  { &Employee::_STRINGS1 , &Employee::_STRINGS2, 0 };
+	MyDateTime Employee::* edt[3] =  { &Employee::_DATETIME1 , &Employee::_DATETIME2, 0 };
+
+	  Sqrat::Class<Employee> e(_vm,true);
+	  
+	RegisterInScripts(_vm, &mRootTable );
+
+	  mRootTable.Bind(_SC("DateTime"), edto); 
+		  
+		  e.Var(_SC("Int1"), *(en + 0 ) );
+		  e.Var<int>(_SC("Int2"), *(en + 1) );
+		  e.Var<std::string>(_SC("Str1"), *(es + 0 ) );
+		  e.Var<std::string>(_SC("Str2"), *(es + 1 ) );
+		  e.Var<MyDateTime>(_SC("Dt1"), *(edt + 0 ) );
+		  e.Var<MyDateTime>(_SC("Dt2"), *(edt + 1 ) );
+	  mRootTable.Bind(_SC("Employee"), e);
+
+		Sqrat::Script script(_vm);
+      script.CompileString(_SC(" \
+		::print(\"bob.Int1=\"+ bob.Int1 + \" \\n \"); \
+		::print(\"bob.Int2=\"+ bob.Int2 + \" \\n \"); \
+		::print(\"bob.Str1=\"+ bob.Str1 + \" \\n \"); \
+		::print(\"bob.Str2=\"+ bob.Str2 + \" \\n \"); \
+							   "));
+		Employee bob;
+		  bob._NUMBER1 = 1;
+		  bob._NUMBER2 = 2;
+
+		  bob._STRINGS1 = "s1";
+		  bob._STRINGS2 = "s2";
+		  mRootTable.SetInstance(_SC("bob"), &bob);
+  	  //SQChar *addr = const_cast<SQChar*>( vals[0] ); 
+  	  //mConstTable.Const( varName, addr );
+	  //test.SetValue( varName, addr );
+         try 
+		 {
+  		    //SQChar *addr = const_cast<SQChar*>( vals[i] ); 
+  		    //mConstTable.Const( varName, addr );
+			//test.SetValue(varName, addr );
+			//script.CompileString(_SC(" print(\"MyName=\"+ MyName + \" \\n \"); "));
+ //     script.CompileString(_SC(" \
+	//::print(\"MyName=\"+ MyName + \" \\n \"); \
+	//::print(\"ANand= \\n \"); \
+	//						   "));
+            script.Run();
+		 }
+		 catch(Sqrat::Exception ex) 
+		 {
+			std::cerr << "Compile Failed: " << ex.Message();
+		  }
+  }
+  catch(...)
+  {
+	  return false;
+  }
+  return true;
+}
+
+
 bool UnitTest::TestScriptConstantVar(void)
 {
 

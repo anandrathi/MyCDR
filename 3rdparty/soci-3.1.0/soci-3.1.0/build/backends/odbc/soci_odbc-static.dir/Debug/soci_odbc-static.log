@@ -1,0 +1,13 @@
+﻿  Building Custom Rule E:/ani/soci-3.1.0/soci-3.1.0/backends/odbc/CMakeLists.txt
+  CMake does not need to re-run because E:\ani\soci-3.1.0\soci-3.1.0\build\backends\odbc\CMakeFiles\generate.stamp is up-to-date.
+  blob.cpp
+  factory.cpp
+  row-id.cpp
+  session.cpp
+  standard-into-type.cpp
+  standard-use-type.cpp
+  statement.cpp
+  vector-into-type.cpp
+  vector-use-type.cpp
+  Generating Code...
+  soci_odbc-static.vcxproj -> E:\ani\soci-3.1.0\soci-3.1.0\build\lib\Debug\libsoci_odbc_3_1.lib

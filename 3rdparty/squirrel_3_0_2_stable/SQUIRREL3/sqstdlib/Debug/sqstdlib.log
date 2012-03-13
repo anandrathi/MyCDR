@@ -1,0 +1,29 @@
+﻿  sqstdsystem.cpp
+e:\ani\squirrel_3_0_2_stable\squirrel3\sqstdlib\sqstdsystem.cpp(27): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\stdlib.h(433) : see declaration of 'getenv'
+e:\ani\squirrel_3_0_2_stable\squirrel3\sqstdlib\sqstdsystem.cpp(102): warning C4996: 'gmtime': This function or variable may be unsafe. Consider using gmtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\time.inl(99) : see declaration of 'gmtime'
+e:\ani\squirrel_3_0_2_stable\squirrel3\sqstdlib\sqstdsystem.cpp(104): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\time.inl(112) : see declaration of 'localtime'
+  sqstdstring.cpp
+e:\ani\squirrel_3_0_2_stable\squirrel3\sqstdlib\sqstdstring.cpp(138): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+e:\ani\squirrel_3_0_2_stable\squirrel3\sqstdlib\sqstdstring.cpp(139): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+e:\ani\squirrel_3_0_2_stable\squirrel3\sqstdlib\sqstdstring.cpp(140): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+e:\ani\squirrel_3_0_2_stable\squirrel3\sqstdlib\sqstdstring.cpp(219): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+e:\ani\squirrel_3_0_2_stable\squirrel3\sqstdlib\sqstdstring.cpp(224): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\string.h(197) : see declaration of 'strtok'
+  sqstdstream.cpp
+  sqstdrex.cpp
+  sqstdmath.cpp
+  sqstdio.cpp
+e:\ani\squirrel_3_0_2_stable\squirrel3\sqstdlib\sqstdio.cpp(13): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+  sqstdblob.cpp
+  sqstdaux.cpp
+  Generating Code...
+C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1151,5): warning MSB8012: TargetPath(E:\ani\squirrel_3_0_2_stable\SQUIRREL3\sqstdlib\.\Debug\sqstdlib.lib) does not match the Library's OutputFile property value (E:\ani\squirrel_3_0_2_stable\SQUIRREL3\lib\sqstdlib.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+  sqstdlib.vcxproj -> E:\ani\squirrel_3_0_2_stable\SQUIRREL3\sqstdlib\.\Debug\sqstdlib.lib

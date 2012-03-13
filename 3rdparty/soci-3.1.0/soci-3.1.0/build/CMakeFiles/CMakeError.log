@@ -1,0 +1,36 @@
+Determining if files pthread.h exist failed with the following output:
+Change Dir: E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.225]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 2/02/2012 6:53:16 PM.
+Project "E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  F:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"  /Zm1000 
+  CheckIncludeFiles.c
+E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory [E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+Done Building Project "E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory [E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.29
+
+Source:
+/* */
+#include <pthread.h>
+
+
+int main(){return 0;}
+

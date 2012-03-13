@@ -1,0 +1,20 @@
+﻿  backend-loader.cpp
+  blob.cpp
+  connection-pool.cpp
+  error.cpp
+  into-type.cpp
+  once-temp-type.cpp
+  prepare-temp-type.cpp
+  procedure.cpp
+  ref-counted-prepare-info.cpp
+  ref-counted-statement.cpp
+  row.cpp
+  rowid.cpp
+  session.cpp
+  soci-simple.cpp
+  statement.cpp
+  transaction.cpp
+  use-type.cpp
+  values.cpp
+  Generating Code...
+  soci_core.vcxproj -> E:\ani\soci-3.1.0\soci-3.1.0\build\bin\Debug\soci_core_3_1.dll

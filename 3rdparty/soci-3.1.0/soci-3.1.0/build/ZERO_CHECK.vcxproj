@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{F7246DC3-B498-46E1-8922-0ECFD43DD1E4}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ZERO_CHECK</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>F:/Program Files/MySQL/MySQL Server 5.5/include;E:/ani/soci-3.1.0/soci-3.1.0/core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>F:/Program Files/MySQL/MySQL Server 5.5/include;E:/ani/soci-3.1.0/soci-3.1.0/core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>F:/Program Files/MySQL/MySQL Server 5.5/include;E:/ani/soci-3.1.0/soci-3.1.0/core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>F:/Program Files/MySQL/MySQL Server 5.5/include;E:/ani/soci-3.1.0/soci-3.1.0/core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\ZERO_CHECK.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/ZERO_CHECK.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\ZERO_CHECK</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/ZERO_CHECK.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\ZERO_CHECK</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/ZERO_CHECK.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\ZERO_CHECK</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/ZERO_CHECK.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\ZERO_CHECK</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\generate.stamp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"F:\Program Files\CMake 2.8\bin\cmake.exe" -HE:/ani/soci-3.1.0/soci-3.1.0 -BE:/ani/soci-3.1.0/soci-3.1.0/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/generate.stamp.rule;E:\ani\soci-3.1.0\soci-3.1.0\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\CTestConfig.cmake;E:\ani\soci-3.1.0\soci-3.1.0\backends\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\empty\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\empty\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\odbc\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\odbc\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\oracle\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\oracle\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\postgresql\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\postgresql\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\sqlite3\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\sqlite3\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCCompiler.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCPlatform.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCXXCompiler.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCXXPlatform.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeRCCompiler.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeSystem.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociBackend.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociConfig.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociDependencies.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociSystemInfo.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociUtilities.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociVersion.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\Boost.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\MySQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\ODBC.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\Oracle.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\PostgreSQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\SQLite3.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindMySQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindODBC.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindOracle.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindPostgreSQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindSQLite3.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\resources\vs2010-test-cmd-args.vcxproj.user.in;E:\ani\soci-3.1.0\soci-3.1.0\core\CMakeLists.txt;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDependentOption.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CTest.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CTestTargets.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\DartConfiguration.tcl.in;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\core\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\empty\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\empty\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\mysql\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\mysql\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\odbc\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\odbc\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\oracle\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\oracle\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\postgresql\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\postgresql\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\sqlite3\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\sqlite3\test\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"F:\Program Files\CMake 2.8\bin\cmake.exe" -HE:/ani/soci-3.1.0/soci-3.1.0 -BE:/ani/soci-3.1.0/soci-3.1.0/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/generate.stamp.rule;E:\ani\soci-3.1.0\soci-3.1.0\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\CTestConfig.cmake;E:\ani\soci-3.1.0\soci-3.1.0\backends\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\empty\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\empty\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\odbc\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\odbc\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\oracle\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\oracle\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\postgresql\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\postgresql\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\sqlite3\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\sqlite3\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCCompiler.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCPlatform.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCXXCompiler.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCXXPlatform.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeRCCompiler.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeSystem.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociBackend.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociConfig.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociDependencies.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociSystemInfo.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociUtilities.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociVersion.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\Boost.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\MySQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\ODBC.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\Oracle.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\PostgreSQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\SQLite3.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindMySQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindODBC.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindOracle.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindPostgreSQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindSQLite3.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\resources\vs2010-test-cmd-args.vcxproj.user.in;E:\ani\soci-3.1.0\soci-3.1.0\core\CMakeLists.txt;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDependentOption.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CTest.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CTestTargets.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\DartConfiguration.tcl.in;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\core\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\empty\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\empty\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\mysql\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\mysql\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\odbc\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\odbc\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\oracle\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\oracle\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\postgresql\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\postgresql\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\sqlite3\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\sqlite3\test\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"F:\Program Files\CMake 2.8\bin\cmake.exe" -HE:/ani/soci-3.1.0/soci-3.1.0 -BE:/ani/soci-3.1.0/soci-3.1.0/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/generate.stamp.rule;E:\ani\soci-3.1.0\soci-3.1.0\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\CTestConfig.cmake;E:\ani\soci-3.1.0\soci-3.1.0\backends\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\empty\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\empty\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\odbc\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\odbc\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\oracle\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\oracle\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\postgresql\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\postgresql\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\sqlite3\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\sqlite3\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCCompiler.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCPlatform.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCXXCompiler.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCXXPlatform.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeRCCompiler.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeSystem.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociBackend.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociConfig.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociDependencies.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociSystemInfo.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociUtilities.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociVersion.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\Boost.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\MySQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\ODBC.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\Oracle.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\PostgreSQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\SQLite3.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindMySQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindODBC.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindOracle.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindPostgreSQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindSQLite3.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\resources\vs2010-test-cmd-args.vcxproj.user.in;E:\ani\soci-3.1.0\soci-3.1.0\core\CMakeLists.txt;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDependentOption.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CTest.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CTestTargets.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\DartConfiguration.tcl.in;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\core\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\empty\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\empty\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\mysql\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\mysql\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\odbc\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\odbc\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\oracle\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\oracle\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\postgresql\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\postgresql\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\sqlite3\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\sqlite3\test\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"F:\Program Files\CMake 2.8\bin\cmake.exe" -HE:/ani/soci-3.1.0/soci-3.1.0 -BE:/ani/soci-3.1.0/soci-3.1.0/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/generate.stamp.rule;E:\ani\soci-3.1.0\soci-3.1.0\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\CTestConfig.cmake;E:\ani\soci-3.1.0\soci-3.1.0\backends\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\empty\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\empty\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\odbc\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\odbc\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\oracle\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\oracle\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\postgresql\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\postgresql\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\sqlite3\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\backends\sqlite3\test\CMakeLists.txt;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCCompiler.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCPlatform.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCXXCompiler.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeCXXPlatform.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeRCCompiler.cmake;E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\CMakeSystem.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociBackend.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociConfig.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociDependencies.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociSystemInfo.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociUtilities.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\SociVersion.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\Boost.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\MySQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\ODBC.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\Oracle.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\PostgreSQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\dependencies\SQLite3.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindMySQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindODBC.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindOracle.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindPostgreSQL.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\modules\FindSQLite3.cmake;E:\ani\soci-3.1.0\soci-3.1.0\cmake\resources\vs2010-test-cmd-args.vcxproj.user.in;E:\ani\soci-3.1.0\soci-3.1.0\core\CMakeLists.txt;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDependentOption.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CTest.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CTestTargets.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\DartConfiguration.tcl.in;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;F:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\core\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\empty\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\empty\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\mysql\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\mysql\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\odbc\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\odbc\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\oracle\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\oracle\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\postgresql\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\postgresql\test\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\sqlite3\CMakeFiles\generate.stamp;E:\ani\soci-3.1.0\soci-3.1.0\build\backends\sqlite3\test\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\ani\soci-3.1.0\soci-3.1.0\build\CMakeFiles\ZERO_CHECK" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

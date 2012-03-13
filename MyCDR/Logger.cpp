@@ -20,7 +20,7 @@ static void getLogFilename(char * tLofFile)
 	time_t t;
 	ACE_OS::time(&t);
 	ACE_thread_t tid= ACE_Thread::self();
-	sprintf(tLofFile, "LOG/%u_log_%u.txt", tid, t);
+	sprintf(tLofFile, "LOG/log.txt"  );
 
 }
 
@@ -41,6 +41,7 @@ void LoggerCallback::log (ACE_Log_Record &log_record)
 	char tLofFile[255];
 	if(_logSize>=_MaxlogSize)
 	{
+		std::cout << "LOG size " << _logSize << ">=" << _MaxlogSize << std::endl ;
 		if(isFileOpen)
 		{
 			_outStream.close();
@@ -65,6 +66,7 @@ void LoggerCallback::log (ACE_Log_Record &log_record)
 						ACE_TEXT_ALWAYS_CHAR (log_record.msg_data ()));*/
 		_outStream <<  log_record.msg_data ();
 		std::cerr <<  log_record.msg_data ();
+		_logSize +=log_record.length();
 	}
 	else
 	{
@@ -75,9 +77,10 @@ void LoggerCallback::log (ACE_Log_Record &log_record)
 		{
 			_outStream <<  verbose_msg;
 			std::cerr <<  log_record.msg_data ();
+			_logSize +=log_record.length();
 		}
 	}
-
+	_outStream.flush();
 	// Cleanup on the way out.
 }
 

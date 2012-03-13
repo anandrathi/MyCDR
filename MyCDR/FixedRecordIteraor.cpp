@@ -143,12 +143,12 @@ AR_INT64 FixedRecordIteraor::goTo(AR_INT64 index)
 
 void FixedRecordIteraor::dump(void)
 {
-	ACE_DEBUG ((LM_DEBUG, "(%t) FixedRecordIteraor \n"));
+	ACE_DEBUG ((LM_DEBUG, "(%D)(%t) FixedRecordIteraor \n"));
 }
 
 void FixedRecordIteraor::setSTRVar(std::map<std::string, std::string> &s)
 {
-	ACE_TRACE("FixedRecordIteraor::setSTRVar");
+	ACE_TRACE("(%D)(%t) FixedRecordIteraor::setSTRVar");
 	RecordDetails::FIELDDETAILS::iterator it =  _RecordDetails->GetFieldDetails()->begin();
 	for(;it!=_RecordDetails->GetFieldDetails()->end();it++)
 	{
@@ -161,7 +161,7 @@ void FixedRecordIteraor::setSTRVar(std::map<std::string, std::string> &s)
 
 void FixedRecordIteraor::InitScriptVar(void *p, void * s)
 {
-	ACE_TRACE("FixedRecordIteraor::InitScriptVar");
+	ACE_TRACE("(%D)(%t) FixedRecordIteraor::InitScriptVar");
 	//Record::RECORDDATANAME::iterator it = _FixedLocationRecord->_recordDataName.begin();
 	//for(;it!=_FixedLocationRecord->_recordDataName.end();it++)
 	//{
@@ -180,7 +180,7 @@ void FixedRecordIteraor::InitScriptVar(void *p, void * s)
 
 void FixedRecordIteraor::setScriptVar(void *p)
 {
-	ACE_TRACE("FixedRecordIteraor::setScriptVar");
+	ACE_TRACE("(%D)(%t) FixedRecordIteraor::setScriptVar");
 	RecordDetails::FIELDDETAILS::iterator it =  _RecordDetails->GetFieldDetails()->begin();
 	//Record::RECORDDATANAME::iterator it = _FixedLocationRecord->_recordDataName.begin();
 	for(;it!=_RecordDetails->GetFieldDetails()->end();it++)

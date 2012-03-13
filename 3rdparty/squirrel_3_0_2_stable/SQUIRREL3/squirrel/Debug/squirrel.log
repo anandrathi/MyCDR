@@ -1,0 +1,33 @@
+﻿  sqvm.cpp
+e:\ani\squirrel_3_0_2_stable\squirrel3\squirrel\sqvm.cpp(278): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+e:\ani\squirrel_3_0_2_stable\squirrel3\squirrel\sqvm.cpp(281): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+e:\ani\squirrel_3_0_2_stable\squirrel3\squirrel\sqvm.cpp(284): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+e:\ani\squirrel_3_0_2_stable\squirrel3\squirrel\sqvm.cpp(303): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+  sqtable.cpp
+  sqstate.cpp
+  sqobject.cpp
+  sqmem.cpp
+  sqlexer.cpp
+  sqfuncstate.cpp
+  sqdebug.cpp
+e:\ani\squirrel_3_0_2_stable\squirrel3\squirrel\sqdebug.cpp(62): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'vsprintf'
+e:\ani\squirrel_3_0_2_stable\squirrel3\squirrel\sqdebug.cpp(77): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+e:\ani\squirrel_3_0_2_stable\squirrel3\squirrel\sqdebug.cpp(81): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+  sqcompiler.cpp
+e:\ani\squirrel_3_0_2_stable\squirrel3\squirrel\sqcompiler.cpp(92): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'vsprintf'
+  sqclass.cpp
+  sqbaselib.cpp
+  sqapi.cpp
+e:\ani\squirrel_3_0_2_stable\squirrel3\squirrel\sqapi.cpp(37): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          f:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+  Generating Code...
+C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1151,5): warning MSB8012: TargetPath(E:\ani\squirrel_3_0_2_stable\SQUIRREL3\squirrel\.\Debug\squirrel.lib) does not match the Library's OutputFile property value (E:\ani\squirrel_3_0_2_stable\SQUIRREL3\lib\squirrel.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+  squirrel.vcxproj -> E:\ani\squirrel_3_0_2_stable\SQUIRREL3\squirrel\.\Debug\squirrel.lib

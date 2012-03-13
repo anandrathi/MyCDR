@@ -1,0 +1,12 @@
+﻿  blob.cpp
+  common.cpp
+  factory.cpp
+  row-id.cpp
+  session.cpp
+  standard-into-type.cpp
+  standard-use-type.cpp
+  statement.cpp
+  vector-into-type.cpp
+  vector-use-type.cpp
+  Generating Code...
+  soci_mysql-static.vcxproj -> E:\ani\soci-3.1.0\soci-3.1.0\build\lib\Debug\libsoci_mysql_3_1.lib

@@ -5,6 +5,8 @@ public:
 	UnitTest(void);
 	~UnitTest(void);
 	void * _context;
+	bool TestMyDate(void);
+	bool TestScriptClassObject(void);
 	bool TestScriptConstantVar(void);
 	bool TestCharIterator(void);
 	bool TestFixIterator(void);

@@ -16,10 +16,10 @@ MMapFileReader::~MMapFileReader(void)
 	int ret = _pool.map(path,-1,O_RDONLY,ACE_DEFAULT_FILE_PERMS); 
 	if(ret==0)
 	{
-		ACE_DEBUG ((LM_DEBUG, "(%t) MMapFileReader::ReadFile ret==0 %d , %s \n", ret, path));
+		ACE_DEBUG ((LM_DEBUG, "(%D)(%t) MMapFileReader::ReadFile ret==%d , path(%s) \n", ret, path));
 		_ptr = (char*)_pool.addr();
 	}
-	ACE_DEBUG ((LM_DEBUG, "(%t) MMapFileReader::ReadFile ret==%d , ptr = %ul path =%s \n", ret, _ptr, path));
+	ACE_DEBUG ((LM_DEBUG, "(%D)(%t) MMapFileReader::ReadFile ret==%d , ptr = %ul path =%s \n", ret, _ptr, path));
 	return ret;
 }
 
@@ -38,6 +38,6 @@ int MMapFileReader::reset()
 
 void MMapFileReader::dump(void)
 {
-		ACE_DEBUG ((LM_DEBUG, "(%t) MMapFileReader %ul\n",	_ptr ));
+		ACE_DEBUG ((LM_DEBUG, "(%D)(%t)  MMapFileReader %ul\n",	_ptr ));
 		_pool.dump();
 }

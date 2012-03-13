@@ -39,11 +39,11 @@ void FileReader::close(void)
 	
 void FileReader::dump(void)
 {
-	ACE_DEBUG ((LM_DEBUG, "(%t) RecordContainer FileStat.FileSizeBytes  =%ul, FileStat.NumberOfLines =%ul \n",	_FileStat.FileSizeBytes , _FileStat.NumberOfLines));
+	ACE_DEBUG ((LM_DEBUG, "(%D)(%t) RecordContainer FileStat.FileSizeBytes  =%ul, FileStat.NumberOfLines =%ul \n",	_FileStat.FileSizeBytes , _FileStat.NumberOfLines));
 	if(_FileReaderStrategy)
-	{	ACE_DEBUG ((LM_DEBUG, "(%t) RecordContainer _FileReaderStrategy  =%ul, \n",	_FileReaderStrategy));
+	{	ACE_DEBUG ((LM_DEBUG, "(%D)(%t) RecordContainer _FileReaderStrategy  =%ul, \n",	_FileReaderStrategy));
 		_FileReaderStrategy->dump();
 	}
-	ACE_DEBUG ((LM_DEBUG, "(%t) RecordContainer path=%s, \n",	path.c_str()));
+	ACE_DEBUG ((LM_DEBUG, "(%D)(%t) RecordContainer path=%s, \n",	path.c_str()));
 	
 }

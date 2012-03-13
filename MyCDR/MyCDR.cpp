@@ -30,9 +30,11 @@ std::cout << "*********************************** END **************************
 void RunTest(void)
 {
 	UnitTest u;
-	TEST_CHK( u.TestScriptConstantVar() );
-	TEST_CHK( u.TestFixIterator() );
-	TEST_CHK( u.TestCharIterator() );
+	TEST_CHK( u.TestMyDate() );
+	TEST_CHK( u.TestScriptClassObject());
+//	TEST_CHK( u.TestScriptConstantVar() );
+//	TEST_CHK( u.TestFixIterator() );
+//	TEST_CHK( u.TestCharIterator() );
 
 	//TEST_CHK( u.TestCharRecordParse() );
 	//TEST_CHK( u.TestMMapFileReader() );
@@ -45,7 +47,7 @@ void RunTest(void)
 	return;
 }
 int main(int argc, _TCHAR* argv[])
-{
+{ 
 //	sql3test();
 	if(boost::filesystem::current_path().is_complete())
 	{
@@ -70,6 +72,7 @@ int main(int argc, _TCHAR* argv[])
 	//RunTest();
 	//return 0;
 	DRIVER::instance()->Init();
+	RunTest();
 	DRIVER::instance()->Run();
 //	RECORDFACTORY::instance()->dump();
 

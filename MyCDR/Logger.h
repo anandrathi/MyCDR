@@ -22,7 +22,9 @@ class LoggerCallback: public ACE_Log_Msg_Callback
 	unsigned long _MaxlogSize;
 	ACE_TCHAR verbose_msg[ACE_Log_Record::MAXVERBOSELOGMSGLEN];
 	bool isFileOpen;
+
 public:
+
 	inline unsigned int  getLevel(){return _prio;}
 	inline void setLevelThread(unsigned int  p){_prio=p; ACE_LOG_MSG->priority_mask (p, ACE_Log_Msg::THREAD);  }
 	inline void setLevelProcess(unsigned int  p){_prio=p; ACE_LOG_MSG->priority_mask (p, ACE_Log_Msg::PROCESS);  }

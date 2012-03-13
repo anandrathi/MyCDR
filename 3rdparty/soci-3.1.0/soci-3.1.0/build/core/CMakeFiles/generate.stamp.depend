@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+E:/ani/soci-3.1.0/soci-3.1.0/core/CMakeLists.txt
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindThreads.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CheckIncludeFiles.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CheckLibraryExists.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake

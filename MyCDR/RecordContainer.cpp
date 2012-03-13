@@ -38,11 +38,11 @@ void RecordContainer::dump(void)
 {
 	if(_Recorditerator) 
 	{
-		ACE_DEBUG ((LM_DEBUG, "(%t) RecordContainer _Recorditerator=%d \n",	_Recorditerator));
+		ACE_DEBUG ((LM_DEBUG, "(%D)(%t)  RecordContainer _Recorditerator=%d \n",	_Recorditerator));
 	}
 	if(_FileReader) 
 	{
-		ACE_DEBUG ((LM_DEBUG, "(%t) RecordContainer _FileReader=%d \n",	_FileReader));
+		ACE_DEBUG ((LM_DEBUG, "(%D)(%t)  RecordContainer _FileReader=%d \n",	_FileReader));
 	}
-	ACE_DEBUG((LM_DEBUG, "(%t) CharRecord path = %s  ; 	 \n", _path.c_str() ));
+	ACE_DEBUG((LM_DEBUG, "(%D)(%t)  CharRecord path = %s  ; 	 \n", _path.c_str() ));
 }

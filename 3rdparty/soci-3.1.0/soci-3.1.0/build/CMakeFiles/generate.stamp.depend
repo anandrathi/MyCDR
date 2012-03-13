@@ -1,0 +1,58 @@
+# CMake generation dependency list for this directory.
+E:/ani/soci-3.1.0/soci-3.1.0/CMakeLists.txt
+E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/CMakeSystem.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/CMakeCCompiler.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/CMakeCXXCompiler.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CMakeSystemSpecificInformation.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CMakeGenericSystem.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/Platform/WindowsPaths.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CMakeCInformation.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-cl.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/CMakeCPlatform.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/CMakeCXXPlatform.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/Platform/cl.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/CMakeRCCompiler.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CMakeRCInformation.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CMakeCXXInformation.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-cl.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/CMakeCPlatform.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/build/CMakeFiles/CMakeCXXPlatform.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/Platform/cl.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/SociUtilities.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/SociVersion.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/SociSystemInfo.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/SociConfig.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/SociDependencies.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/dependencies/Boost.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindBoost.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindBoost.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/dependencies/MySQL.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/modules/FindMySQL.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/dependencies/ODBC.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/modules/FindODBC.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/dependencies/Oracle.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/modules/FindOracle.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/dependencies/PostgreSQL.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/modules/FindPostgreSQL.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/dependencies/SQLite3.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/modules/FindSQLite3.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CTest.cmake
+E:/ani/soci-3.1.0/soci-3.1.0/CTestConfig.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CTestTargets.cmake
+F:/Program Files/CMake 2.8/share/cmake-2.8/Modules/DartConfiguration.tcl.in
+E:/ani/soci-3.1.0/soci-3.1.0/cmake/SociBackend.cmake

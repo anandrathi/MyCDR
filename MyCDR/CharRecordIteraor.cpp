@@ -210,6 +210,6 @@ void CharRecordIteraor::begin(void)
 
 void CharRecordIteraor::dump(void)
 {
-	ACE_DEBUG ((LM_DEBUG, "(%t) CharRecordIteraor \n"));
+	ACE_DEBUG ((LM_DEBUG, "(%D)(%t) CharRecordIteraor \n"));
 }
 

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\blob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\row-id.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\session.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\standard-into-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\standard-use-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\statement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\vector-into-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\vector-use-type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\soci-mysql.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\ani\soci-3.1.0\soci-3.1.0\backends\mysql\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\backends\mysql\CMakeLists.txt">
+      <Filter>CMake Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{69A6727F-5BC7-406E-A2D5-E70FE4BCB5A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5BE7A797-D002-4D0B-8633-522BE4251856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Files">
+      <UniqueIdentifier>{E11F47FC-7491-44AD-97F9-AFA2744F75A7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
